@@ -1115,563 +1115,893 @@ const SHEET_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxH08_vQhw7nqJ
 // ***************************************************************
 
 // Quiz Data
-const quizData_WCW_RES_001 = [
+const quizData_WCW_BIO_01 = [
     {
-        question: "What is the primary purpose of respiration in an organism?",
+        question: "What is the primary characteristic of cellular respiration regarding energy and molecular complexity?",
         options: [
-            "To synthesize complex organic compounds",
-            "To release energy for body activities",
-            "To store carbon dioxide in tissues",
-            "To produce water as a byproduct"
+            "It synthesizes complex organic compounds from simpler molecules, consuming energy.",
+            "It breaks down complex organic compounds into simpler molecules, releasing energy.",
+            "It involves gas exchange between the body fluids and the external environment.",
+            "It occurs exclusively in the presence of sunlight, producing oxygen."
         ],
         correctAnswer: 1,
-        reasoning: "The text states: 'Purpose: To make food energy available for body activities.'"
+        reasoning: "The Book theory State that: Cellular/Internal Respiration is a catabolic process within cells where complex organic compounds break down into simpler molecules, releasing energy."
     },
     {
-        question: "Which part of the upper respiratory tract is shared by both the digestive and respiratory systems?",
+        question: "Which property is crucial for the efficient diffusion of gases across a respiratory surface?",
         options: [
-            "Nasal cavity",
-            "Larynx",
-            "Pharynx",
-            "Trachea"
+            "Thickness exceeding 1 millimeter.",
+            "A dry and impermeable barrier.",
+            "A small surface area to minimize energy expenditure.",
+            "A thin barrier, typically 1 mm or less."
+        ],
+        correctAnswer: 3,
+        reasoning: "The Book theory State that: For effective gas diffusion, the respiratory surface must be Thin, as diffusion is efficient only over short distances (1 mm or less)."
+    },
+    {
+        question: "The nasal cavities are primarily lined with which type of tissue to perform defense mechanisms?",
+        options: [
+            "Smooth muscle tissue without cilia.",
+            "Stratified squamous epithelium.",
+            "Mucous membranes and cilia.",
+            "Dense connective tissue for structural support."
         ],
         correctAnswer: 2,
-        reasoning: "The text identifies the Pharynx (Throat) as 'Part of both digestive and respiratory systems'."
+        reasoning: "The Book theory State that: Nasal Cavities are inner hollow spaces, partitioned by the nasal septum, lined with mucous membranes and cilia. These structures, along with nose hairs, mucus, and cilia, filter out pathogens, dust, and particulate matter."
     },
     {
-        question: "What prevents the trachea from collapsing?",
+        question: "What is the specific function of the epiglottis during the act of swallowing?",
         options: [
-            "Elastic fibers in its wall",
-            "15-20 C-shaped pieces of hyaline cartilage",
-            "Continuous muscle contraction",
-            "Internal air pressure"
+            "To vibrate and produce vocal sounds.",
+            "To connect the nasal and oral cavities to the esophagus.",
+            "To prevent food and liquids from entering the air passages.",
+            "To reinforce the trachea and prevent its collapse."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: The Epiglottis prevents food and liquids from entering the air passages during swallowing."
+    },
+    {
+        question: "What reinforces the trachea, preventing its collapse while allowing flexibility?",
+        options: [
+            "Dense fibrous tissue forming a solid tube.",
+            "A continuous ring of hyaline cartilage.",
+            "15-20 C-shaped cartilage pieces, open posteriorly.",
+            "Elastic tissue without any cartilaginous support."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: The Trachea is a membranous tube (approx. 10-12 cm long) reinforced with 15-20 C-shaped cartilage pieces (open posteriorly) to prevent collapse."
+    },
+    {
+        question: "Which structures lack cartilage and are responsible for controlling air distribution by changing their diameter?",
+        options: [
+            "Primary bronchi.",
+            "Trachea.",
+            "Bronchioles.",
+            "Alveolar ducts."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: Bronchioles (less than 1mm diameter) lack cartilage. Bronchioles control air distribution by changing diameter."
+    },
+    {
+        question: "What is the primary function of surfactant within the alveoli?",
+        options: [
+            "To increase the surface area for gas exchange.",
+            "To produce vocal sounds through vibration.",
+            "To lower surface tension and prevent alveolar collapse.",
+            "To transport oxygen directly to the blood capillaries."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: Surfactant is a lipoprotein secreted by alveolar cells that lowers surface tension, prevents alveolar collapse, aids gas transport, and kills bacteria."
+    },
+    {
+        question: "Which muscle is a large, dome-shaped skeletal muscle separating the thoracic and abdominal cavities, crucial for breathing?",
+        options: [
+            "External intercostal muscle.",
+            "Internal intercostal muscle.",
+            "Diaphragm.",
+            "Abdominal rectus muscle."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: The Diaphragm is a large, dome-shaped skeletal muscle separating the thoracic and abdominal cavities, responsible for breathing."
+    },
+    {
+        question: "During normal inspiration, what action do the external intercostal muscles perform?",
+        options: [
+            "They relax, moving the rib cage downward and inward.",
+            "They contract, moving the rib cage upward and forward.",
+            "They contract, moving the rib cage downward and backward.",
+            "They relax, allowing the rib cage to remain stationary."
         ],
         correctAnswer: 1,
-        reasoning: "The text states the trachea is 'Reinforced by 15-20 C-shaped pieces of hyaline cartilage to prevent collapse'."
+        reasoning: "The Book theory State that: During Inspiration, external intercostal muscles contract, moving the rib cage upward and forward."
     },
     {
-        question: "Which substance lowers surface tension in the alveoli and prevents their collapse?",
+        question: "What is the approximate volume of air exchanged during normal, quiet breathing?",
         options: [
-            "Collagen",
-            "Elastin",
-            "Surfactant",
-            "Mucus"
+            "3000 ml.",
+            "1200 ml.",
+            "500 ml.",
+            "1.5 liters."
         ],
         correctAnswer: 2,
-        reasoning: "The text notes: 'Surfactant: A lipoprotein ... Lowers surface tension, prevents alveolar collapse'."
+        reasoning: "The Book theory State that: Tidal Volume (TV) is the volume of air exchanged during normal, quiet breathing (approx. 500 ml)."
     },
     {
-        question: "What is the approximate volume of air exchanged during one quiet breath, known as Tidal Volume (TV)?",
+        question: "Which part of the brain is the primary control center for involuntary breathing?",
         options: [
-            "1200 ml",
-            "500 ml",
-            "3000 ml",
-            "1.5 liters"
+            "Cerebral hemispheres.",
+            "Pons.",
+            "Cerebellum.",
+            "Medulla oblongata."
         ],
-        correctAnswer: 1,
-        reasoning: "The text defines 'Tidal Volume (TV): Volume of air exchanged during one quiet breath (~500 ml)'."
-    },
-    {
-        question: "Where is the primary involuntary breathing center located in the brain?",
-        options: [
-            "Pons",
-            "Cerebral hemispheres",
-            "Medulla oblongata",
-            "Limbic system"
-        ],
-        correctAnswer: 2,
-        reasoning: "The text states: 'Involuntary Control: Primarily managed by a breathing center in the medulla oblongata'."
+        correctAnswer: 3,
+        reasoning: "The Book theory State that: Breathing is largely an involuntary process, controlled by a breathing center in the medulla oblongata of the brain."
     },
     {
         question: "How is the majority of oxygen transported in the blood?",
         options: [
-            "Dissolved in plasma",
-            "As bicarbonate ions",
-            "Bound to haemoglobin",
-            "As carbaminohaemoglobin"
-        ],
-        correctAnswer: 2,
-        reasoning: "The text specifies: 'Approximately 97% of oxygen is carried by red blood cells bound to haemoglobin'."
-    },
-    {
-        question: "What is the primary function of myoglobin in skeletal muscles?",
-        options: [
-            "To transport CO2",
-            "To store oxygen",
-            "To produce ATP",
-            "To increase blood flow"
+            "As dissolved oxygen in plasma.",
+            "By red blood cells as oxyhaemoglobin.",
+            "Bound to plasma proteins.",
+            "As bicarbonate ions."
         ],
         correctAnswer: 1,
-        reasoning: "The text describes myoglobin's function as: 'Stores oxygen in resting muscle'."
+        reasoning: "The Book theory State that: 97% of oxygen is carried by red blood cells as oxyhaemoglobin (HbO2), where haemoglobin binds with 4 oxygen molecules."
     },
     {
-        question: "Which respiratory protective mechanism involves small hair-like structures that move trapped substances to the pharynx?",
+        question: "In the context of gas transport, what is the role of carbonic anhydrase?",
         options: [
-            "Nostril hairs",
-            "Mucous lining",
-            "Cilia",
-            "Epiglottis"
-        ],
-        correctAnswer: 2,
-        reasoning: "The text mentions: '...cilia (mucous elevator) remove foreign particles.'"
-    },
-    {
-        question: "Which condition results from spasmodic contraction of the diaphragm with a closed glottis?",
-        options: [
-            "Sneezing",
-            "Snoring",
-            "Hiccups",
-            "Yawning"
-        ],
-        correctAnswer: 2,
-        reasoning: "The text defines 'Hiccups: Spasmodic contraction of the diaphragm with a closed glottis, producing a sharp sound'."
-    },
-    {
-        question: "The process at the cellular level involving the breakdown of complex organic compounds into simpler molecules with energy release is termed:",
-        options: [
-            "External respiration",
-            "Ventilation",
-            "Internal respiration",
-            "Gas exchange"
-        ],
-        correctAnswer: 2,
-        reasoning: "The text states: 'Internal Respiration (Cellular Level): A catabolic process involving the breakdown of complex organic compounds into simpler molecules with the release of energy. Occurs at the cellular level.'"
-    },
-    {
-        question: "For efficient gas diffusion, the respiratory surface must primarily facilitate passage of gases by being:",
-        options: [
-            "Highly vascularized",
-            "Moist and permeable",
-            "Greatly ventilated",
-            "Thick and robust"
+            "To bind oxygen to haemoglobin.",
+            "To catalyze the formation of carbonic acid from CO2 and water.",
+            "To transport carbon dioxide as carbaminohaemoglobin.",
+            "To facilitate the release of oxygen from haemoglobin in tissues."
         ],
         correctAnswer: 1,
-        reasoning: "The text explicitly lists: 'For effective gas diffusion, the respiratory surface must be: Moist and permeable: Gases can pass through easily.'"
+        reasoning: "The Book theory State that: CO2 diffuses into RBCs and reacts with water to form carbonic acid (H2CO3) in the presence of carbonic anhydrase."
     },
     {
-        question: "The anterior parts of the nasal cavities, known as vestibules, contain structures specifically for:",
+        question: "Which respiratory pigment is found in skeletal muscles and acts as an oxygen store?",
         options: [
-            "Detecting smells",
-            "Filtering large particulate matter",
-            "Warming incoming air",
-            "Humidifying dry air"
+            "Haemoglobin.",
+            "Chlorophyll.",
+            "Myoglobin.",
+            "Cytochrome."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: Myoglobin is found in skeletal muscles and acts as an oxygen store in muscles."
+    },
+    {
+        question: "Carbon monoxide poisoning is dangerous because CO binds to haemoglobin how many times more readily than oxygen?",
+        options: [
+            "Approximately 20 times.",
+            "Approximately 50 times.",
+            "Approximately 100 times.",
+            "Approximately 249 times."
+        ],
+        correctAnswer: 3,
+        reasoning: "The Book theory State that: Carbon Monoxide (CO) binds to haemoglobin 249 times more readily than oxygen, preventing oxygen transport and leading to tissue hypoxia."
+    },
+    {
+        question: "What is the function of the uvula during swallowing?",
+        options: [
+            "To produce vocal sounds.",
+            "To filter incoming air.",
+            "To close the nasopharynx.",
+            "To prevent food from entering the trachea."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: The Uvula is a conic projection that closes the nasopharynx during swallowing and produces saliva."
+    },
+    {
+        question: "Which part of the pharynx has a primary respiratory function?",
+        options: [
+            "Oropharynx.",
+            "Laryngopharynx.",
+            "Nasopharynx.",
+            "Esopharynx."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: The Pharynx is divided into: Nasopharynx (respiratory function), Oropharynx (swallowing), and Laryngopharynx (where respiratory and digestive tracts diverge)."
+    },
+    {
+        question: "What type of tissue lines the alveolar walls, enabling efficient gas exchange?",
+        options: [
+            "Ciliated columnar epithelium.",
+            "Cuboidal epithelium.",
+            "Stratified squamous epithelium.",
+            "Moist squamous epithelium."
+        ],
+        correctAnswer: 3,
+        reasoning: "The Book theory State that: Alveolar walls are extremely thin (0.1 µm), lined with moist squamous epithelium, and surrounded by a dense network of blood capillaries."
+    },
+    {
+        question: "What happens to the diaphragm during normal expiration?",
+        options: [
+            "It contracts and moves downward.",
+            "It relaxes and returns to its dome shape.",
+            "It remains contracted and stationary.",
+            "It contracts and moves upward."
         ],
         correctAnswer: 1,
-        reasoning: "The text states: 'Vestibules: Anterior parts near nostrils, contain hairs. Functions: Filtration: Hairs... trap harmful pathogens, dust, and particulate matter.'"
+        reasoning: "The Book theory State that: During Expiration (normally passive), the diaphragm relaxes and returns to its dome shape (moves upward)."
     },
     {
-        question: "The pharynx is functionally divided into three parts; the one responsible for conditioning inspired air is the:",
+        question: "Which respiratory volume represents the air remaining in the lungs after a forcible expiration?",
         options: [
-            "Oropharynx",
-            "Laryngopharynx",
-            "Nasopharynx",
-            "Hypopharynx"
+            "Tidal Volume.",
+            "Inspiratory Reserve Volume.",
+            "Expiratory Reserve Volume.",
+            "Residual Volume."
+        ],
+        correctAnswer: 3,
+        reasoning: "The Book theory State that: Residual Volume (RV) is the volume of air remaining in the lungs even after a forcible expiration (approx. 1.5 liters)."
+    },
+    {
+        question: "The respiratory system is responsible for the exchange of gases between body fluids and the external environment. This statement describes which level of respiration?",
+        options: [
+            "Cellular respiration.",
+            "Internal respiration.",
+            "Organismic/External respiration.",
+            "Anaerobic respiration."
         ],
         correctAnswer: 2,
-        reasoning: "The text specifies: 'Nasopharynx: From skull base to soft palate, conditions inspired air.'"
+        reasoning: "The Book theory State that: Organismic/External Respiration is the process of inhaling oxygen from the environment and exhaling carbon dioxide into it. The respiratory system is responsible for the exchange of gases between body fluids and the external environment."
     },
     {
-        question: "What is the primary role of the epiglottis during swallowing?",
+        question: "For effective gas diffusion, the respiratory surface must possess what characteristic to allow gases to pass through easily?",
         options: [
-            "To vibrate and produce sound",
-            "To open the glottis wider",
-            "To prevent food and liquid from entering the larynx",
-            "To regulate airflow to the bronchi"
+            "Be highly vascularized.",
+            "Be moist and permeable.",
+            "Be rigid and unyielding.",
+            "Be thick to prevent damage."
+        ],
+        correctAnswer: 1,
+        reasoning: "The Book theory State that: For effective gas diffusion, the respiratory surface must be Moist and Permeable to allow gases to pass through easily."
+    },
+    {
+        question: "The nose includes vestibules, which are the anterior parts near the nostrils. These vestibules contain what structures?",
+        options: [
+            "Vocal cords.",
+            "Olfactory bulbs.",
+            "Hairs.",
+            "Turbinates."
         ],
         correctAnswer: 2,
-        reasoning: "The text explains: 'Epiglottis: ...presses down during swallowing to prevent food/liquid entry.'"
+        reasoning: "The Book theory State that: Vestibules are anterior parts near nostrils containing hairs."
     },
     {
-        question: "The vocal cords, described as two pairs of horizontal folds with elastic fibers, produce sound when:",
+        question: "The pharynx is described as a cone-shaped passageway. What does it connect?",
         options: [
-            "Air is forced past them causing vibration",
-            "They relax to allow air to pass silently",
-            "They contract rhythmically",
-            "Food passes over them"
+            "The trachea to the bronchi.",
+            "The larynx to the alveoli.",
+            "Nasal and oral cavities to the esophagus and larynx.",
+            "The bronchioles to the alveolar ducts."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: The Pharynx (Throat) is a cone-shaped passageway connecting nasal and oral cavities to the esophagus and larynx."
+    },
+    {
+        question: "The larynx is an enlargement at the top of the trachea. What is its common name?",
+        options: [
+            "Windpipe.",
+            "Throat.",
+            "Voice Box/Glottis.",
+            "Bronchial tree."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: The Larynx is an enlargement at the top of the trachea, commonly known as the Voice Box/Glottis."
+    },
+    {
+        question: "The trachea divides into two primary bronchi. How does the right bronchus compare to the left?",
+        options: [
+            "It is narrower and longer.",
+            "It is wider and shorter.",
+            "It is structurally identical to the left.",
+            "It leads directly to the left lung."
+        ],
+        correctAnswer: 1,
+        reasoning: "The Book theory State that: The trachea divides into two primary bronchi (right bronchus is wider and shorter than the left)."
+    },
+    {
+        question: "Alveoli are described as tiny air-filled chambers. What is their primary role?",
+        options: [
+            "To warm and moisten incoming air.",
+            "To produce vocal sounds.",
+            "To filter particulate matter from the air.",
+            "To serve as primary sites of gas exchange between air and blood."
+        ],
+        correctAnswer: 3,
+        reasoning: "The Book theory State that: Alveoli are tiny air-filled chambers that are the primary sites of gas exchange between air and blood."
+    },
+    {
+        question: "The lungs are the principal organs of respiration, conical in shape. Where does their base rest?",
+        options: [
+            "On the clavicle.",
+            "On the heart.",
+            "On the diaphragm.",
+            "On the sternum."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: Lungs are the principal organs of respiration, conical in shape, with the base resting on the diaphragm."
+    },
+    {
+        question: "Breathing is accomplished by the diaphragm, abdominal muscles, and intercostal muscles. What is true regarding the lungs' role in this process?",
+        options: [
+            "Lungs actively draw in and push out air.",
+            "Lungs themselves do not actively draw in or push out air.",
+            "Lungs contract during inspiration and relax during expiration.",
+            "Lungs are the only muscles involved in quiet breathing."
+        ],
+        correctAnswer: 1,
+        reasoning: "The Book theory State that: Breathing is accomplished by the diaphragm, abdominal muscles, and intercostal muscles, as the lungs themselves do not actively draw in or push out air."
+    },
+    {
+        question: "During inspiration, the volume of the thoracic cavity changes. What is the effect on pressure in the lungs?",
+        options: [
+            "Volume decreases, increasing pressure above atmospheric pressure.",
+            "Volume increases, reducing pressure to below atmospheric pressure.",
+            "Volume increases, increasing pressure above atmospheric pressure.",
+            "Volume decreases, reducing pressure to below atmospheric pressure."
+        ],
+        correctAnswer: 1,
+        reasoning: "The Book theory State that: During Inspiration, the volume of the thoracic cavity increases, reducing pressure in the lungs to below atmospheric pressure, causing air to rush in."
+    },
+    {
+        question: "In forced exhalation, what action do the internal intercostal muscles perform?",
+        options: [
+            "They relax.",
+            "They contract.",
+            "They move the rib cage upward.",
+            "They remain inactive."
+        ],
+        correctAnswer: 1,
+        reasoning: "The Book theory State that: During Expiration (especially in forced exhalation), internal intercostal muscles contract."
+    },
+    {
+        question: "What is the approximate average adult lung capacity?",
+        options: [
+            "About 2 liters.",
+            "About 3 liters.",
+            "About 4 liters.",
+            "About 5 liters."
+        ],
+        correctAnswer: 3,
+        reasoning: "The Book theory State that: Average adult lung capacity is about 5 liters."
+    },
+    {
+        question: "Inspiratory Reserve Volume (IRV) is defined as what?",
+        options: [
+            "Volume of air exchanged during normal breathing.",
+            "Additional air that can be forcibly inhaled after a normal tidal inspiration.",
+            "Additional air that can be forcibly exhaled after a normal tidal expiration.",
+            "Volume of air remaining in the lungs after forcible expiration."
+        ],
+        correctAnswer: 1,
+        reasoning: "The Book theory State that: Inspiratory Reserve Volume (IRV) is the additional air that can be forcibly inhaled after a normal tidal inspiration (approx. 3000 ml)."
+    },
+    {
+        question: "Nerve impulses for breathing are sent to the diaphragm via which specific nerves?",
+        options: [
+            "Intercostal nerves.",
+            "Vagus nerves.",
+            "Phrenic nerves.",
+            "Spinal accessory nerves."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: Nerve impulses are sent via intercostal nerves to intercostal muscles and phrenic nerves to the diaphragm."
+    },
+    {
+        question: "How much oxygen is transported as dissolved oxygen in plasma?",
+        options: [
+            "97%.",
+            "70%.",
+            "23%.",
+            "3%."
+        ],
+        correctAnswer: 3,
+        reasoning: "The Book theory State that: 3% of oxygen is transported as dissolved oxygen in plasma."
+    },
+    {
+        question: "The Oxygen-Haemoglobin Dissociation Curve illustrates what relationship with partial pressure of oxygen (PO2)?",
+        options: [
+            "Higher PO2 in tissues leads to more oxygen binding to haemoglobin.",
+            "Lower PO2 in lungs leads to oxygen dissociation from haemoglobin.",
+            "Higher PO2 in lungs leads to more oxygen binding to haemoglobin.",
+            "PO2 has no effect on oxygen binding to haemoglobin."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: The Oxygen-Haemoglobin Dissociation Curve illustrates that higher PO2 (e.g., in lungs) leads to more oxygen binding to haemoglobin, while lower PO2 (e.g., in tissues) leads to oxygen dissociation and release."
+    },
+    {
+        question: "What percentage of carbon dioxide is transported as bicarbonate ions (HCO3-)?",
+        options: [
+            "Approximately 7%.",
+            "Approximately 23%.",
+            "Approximately 70%.",
+            "Approximately 97%."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: ~70% of CO2 is transported as Bicarbonate Ions (HCO3-)."
+    },
+    {
+        question: "Haemoglobin consists of four polypeptide chains. What are these chains called?",
+        options: [
+            "Actin.",
+            "Myosin.",
+            "Globin.",
+            "Albumin."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: Haemoglobin consists of four polypeptide chains (globin) and four iron-containing haem groups."
+    },
+    {
+        question: "What is the definition of hiccups?",
+        options: [
+            "A forceful reflex expiration through the nasal cavity.",
+            "Spasmodic contractions of the diaphragm with a closed glottis.",
+            "A rough noise during inhalation caused by soft palate vibration.",
+            "An involuntary cessation of breathing for short periods."
+        ],
+        correctAnswer: 1,
+        reasoning: "The Book theory State that: Hiccups are spasmodic contractions of the diaphragm with a closed glottis."
+    },
+    {
+        question: "What is snorkeling?",
+        options: [
+            "A forceful reflex expiration.",
+            "Spasmodic contractions of the diaphragm.",
+            "A rough noise during inhalation.",
+            "An underwater breathing technique using compressed air."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: Snoring is a rough noise during inhalation, typically caused by vibration of the soft palate."
+    },
+    {
+        question: "What is the term for the catabolic process within cells where complex organic compounds break down into simpler molecules, releasing energy?",
+        options: [
+            "External Respiration.",
+            "Ventilation.",
+            "Cellular Respiration.",
+            "Gas Exchange."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: Cellular/Internal Respiration is a catabolic process within cells where complex organic compounds break down into simpler molecules, releasing energy."
+    },
+    {
+        question: "Which characteristic of the respiratory surface ensures that sufficient gas exchange occurs according to the organism's needs?",
+        options: [
+            "Moistness.",
+            "Thinness.",
+            "Large surface area.",
+            "Good blood supply."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: For effective gas diffusion, the respiratory surface must have a Large Surface Area to enable sufficient gas exchange according to the organism's needs."
+    },
+    {
+        question: "The nasal septum divides which structures in the upper respiratory tract?",
+        options: [
+            "Nostrils.",
+            "Nasal cavities.",
+            "Pharynx.",
+            "Larynx."
+        ],
+        correctAnswer: 1,
+        reasoning: "The Book theory State that: Nasal Cavities are inner hollow spaces, partitioned by the nasal septum."
+    },
+    {
+        question: "The glottis is primarily defined as what?",
+        options: [
+            "The opening of the larynx.",
+            "The structure preventing food from entering the trachea.",
+            "The cartilaginous reinforcement of the trachea.",
+            "The membrane lining the nasal cavity."
         ],
         correctAnswer: 0,
-        reasoning: "The text describes: 'Vocal Cords: ...vibrate to produce sound when air is forced past them.'"
+        reasoning: "The Book theory State that: Glottis is the opening of the larynx."
     },
     {
-        question: "Bronchioles are distinguished from primary, secondary, and tertiary bronchi by their lack of:",
+        question: "How many lobes does the right lung typically have?",
         options: [
-            "Ciliated lining",
-            "Mucus secretion",
-            "Cartilage",
-            "Smooth muscle"
+            "One.",
+            "Two.",
+            "Three.",
+            "Four."
         ],
         correctAnswer: 2,
-        reasoning: "The text differentiates: 'Bronchioles: Further branching, <1mm diameter, no cartilage.'"
+        reasoning: "The Book theory State that: The right lung has three lobes."
     },
     {
-        question: "The tiny air-filled chambers where O2 and CO2 exchange between air and blood occurs are called:",
+        question: "Which phase of breathing is normally considered passive?",
         options: [
-            "Terminal bronchioles",
-            "Alveolar ducts",
-            "Bronchi",
-            "Alveoli"
+            "Inspiration.",
+            "Inhalation.",
+            "Expiration.",
+            "Both inspiration and expiration."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: Expiration (Exhalation) is normally a Passive Phase."
+    },
+    {
+        question: "After a normal tidal expiration, what is the additional air that can be forcibly exhaled called?",
+        options: [
+            "Tidal Volume.",
+            "Inspiratory Reserve Volume.",
+            "Expiratory Reserve Volume.",
+            "Residual Volume."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: Expiratory Reserve Volume (ERV) is the additional air that can be forcibly exhaled after a normal tidal expiration."
+    },
+    {
+        question: "Which center in the medulla oblongata is responsible for increasing the rate and depth of inspiration?",
+        options: [
+            "Expiratory Center.",
+            "Voluntary Control Center.",
+            "Inspiratory Center.",
+            "Pons Reflex Center."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: The Inspiratory Center in the medulla oblongata increases the rate and depth of inspiration."
+    },
+    {
+        question: "What is the effect of haemoglobin buffering H+ ions during CO2 transport?",
+        options: [
+            "It prevents CO2 from reacting with water.",
+            "It promotes oxygen binding to haemoglobin.",
+            "It prevents a significant drop in blood pH.",
+            "It facilitates the chloride shift into the plasma."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: Haemoglobin buffers the H+ ions, preventing significant pH drop, which is crucial during the transport of carbon dioxide as bicarbonate ions."
+    },
+    {
+        question: "Compared to myoglobin, haemoglobin has what characteristic regarding oxygen affinity?",
+        options: [
+            "Higher affinity for oxygen.",
+            "Lower affinity for oxygen.",
+            "Equal affinity for oxygen.",
+            "Affinity that is independent of PO2."
+        ],
+        correctAnswer: 1,
+        reasoning: "The Book theory State that: Haemoglobin loses oxygen at a higher PO2 (e.g., 60 mmHg) compared to myoglobin. Less affinity for oxygen."
+    },
+    {
+        question: "What is a major cause of cancers in the mouth, larynx, and esophagus, in addition to lung cancer?",
+        options: [
+            "Environmental allergens.",
+            "Viral infections.",
+            "Smoking.",
+            "Genetic predisposition alone."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: Smoking is a major cause of cancers in the mouth, larynx, and esophagus."
+    },
+    {
+        question: "CPR is described as mouth-to-mouth artificial respiration. What is its purpose?",
+        options: [
+            "To measure respiratory volumes.",
+            "To diagnose respiratory disorders.",
+            "To revive individuals who have stopped breathing.",
+            "To analyze blood gas levels."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: CPR (Cardiopulmonary Resuscitation) is mouth-to-mouth artificial respiration to revive individuals who have stopped breathing."
+    },
+    {
+        question: "What is an indicator symptom of carbon monoxide poisoning?",
+        options: [
+            "Bluish discoloration of lips.",
+            "Fever and chills.",
+            "Cherry-red lips.",
+            "Pale skin and rapid breathing."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: Symptoms of Carbon Monoxide poisoning include nausea, headache, and 'cherry-red' lips."
+    },
+    {
+        question: "In what specific part of the lungs does the hilum represent an entry/exit point?",
+        options: [
+            "Alveoli.",
+            "Bronchioles.",
+            "The base of the lung.",
+            "A triangular depression on the lung surface."
         ],
         correctAnswer: 3,
-        reasoning: "The text defines 'Alveoli: Tiny air-filled chambers... Site of Gas Exchange: Where O2 and CO2 exchange between air and blood occurs.'"
+        reasoning: "The Book theory State that: Hilum is a triangular depression where blood vessels and airways enter/exit the lungs."
     },
     {
-        question: "The area between the lungs containing the heart is referred to as the:",
+        question: "What is the approximate total surface area provided by the human alveoli for gas exchange?",
         options: [
-            "Hilum",
-            "Pleural cavity",
-            "Mediastinum",
-            "Diaphragm"
-        ],
-        correctAnswer: 2,
-        reasoning: "The text specifies: 'Mediastinum: Area between the lungs containing the heart.'"
-    },
-    {
-        question: "During the active phase of inspiration, the diaphragm's action involves:",
-        options: [
-            "Relaxing and moving upward",
-            "Contracting and moving downward",
-            "Contracting and moving sideways",
-            "Relaxing and remaining stationary"
-        ],
-        correctAnswer: 1,
-        reasoning: "The text states for Inspiration: 'Diaphragm contracts and flattens (moves downward).'"
-    },
-    {
-        question: "In normal expiration, which muscular action is described as the internal intercostals contracting while external intercostals relax?",
-        options: [
-            "Pulling the rib cage upward and forward",
-            "Flattening the diaphragm",
-            "Pulling the rib cage downward and backward",
-            "Increasing thoracic cavity volume"
-        ],
-        correctAnswer: 2,
-        reasoning: "The text states for Expiration: '...internal intercostals contract, pulling rib cage downward and backward.'"
-    },
-    {
-        question: "The volume of air remaining in the lungs even after a forcible expiration is termed:",
-        options: [
-            "Tidal Volume",
-            "Inspiratory Reserve Volume",
-            "Expiratory Reserve Volume",
-            "Residual Volume"
+            "5-10 m².",
+            "20-30 m².",
+            "40-50 m².",
+            "70-90 m²."
         ],
         correctAnswer: 3,
-        reasoning: "The text defines 'Residual Volume (RV): Air remaining in the lungs even after a forcible expiration (~1.5 liters).'"
+        reasoning: "The Book theory State that: Alveoli (over 700 million) provide 70-90 m² surface area, which are the primary sites of gas exchange."
     },
     {
-        question: "The inspiratory center, located in the ventral medulla, primarily serves to:",
+        question: "What mechanism helps maintain a steep diffusion gradient across the respiratory surface?",
         options: [
-            "Inhibit inspiration",
-            "Stimulate forceful expiration",
-            "Control inspiration, increasing its rate and depth",
-            "Regulate the pH of blood"
+            "Good blood supply.",
+            "Moisture of the surface.",
+            "Good ventilation mechanism.",
+            "Permeability of the surface."
         ],
         correctAnswer: 2,
-        reasoning: "The text describes: 'Inspiratory Center (Ventral Medulla): Controls inspiration, increasing its rate and depth. Primary respiratory center.'"
+        reasoning: "The Book theory State that: A Good Ventilation Mechanism is required to maintain a steep diffusion gradient across the respiratory surface."
     },
     {
-        question: "Nerve connections from the breathing center communicate with the diaphragm via which specific nerves?",
+        question: "Which structure, part of both the digestive and respiratory systems, is important for vocalization?",
         options: [
-            "Intercostal nerves",
-            "Vagus nerves",
-            "Phrenic nerves",
-            "Cranial nerves"
+            "Nasal cavity.",
+            "Trachea.",
+            "Pharynx.",
+            "Esophagus."
         ],
         correctAnswer: 2,
-        reasoning: "The text states: 'Nerve Connections: Breathing center ... with the diaphragm via phrenic nerves.'"
+        reasoning: "The Book theory State that: The Pharynx is part of both digestive and respiratory systems and important for vocalization."
     },
     {
-        question: "The approximate percentage of oxygen transported dissolved in blood plasma is:",
+        question: "The trachea's ciliated mucus membrane serves what dual purpose in air passage?",
         options: [
-            "97%",
-            "70%",
-            "23%",
-            "3%"
+            "Gas exchange and vocalization.",
+            "Moistening/warming and protection from foreign particles.",
+            "Filtering dust and regulating blood pressure.",
+            "Structural support and preventing collapse."
+        ],
+        correctAnswer: 1,
+        reasoning: "The Book theory State that: The Trachea is lined with ciliated mucus membrane for air passage, moistening, warming, and protection from foreign particles."
+    },
+    {
+        question: "What substance secreted by alveolar cells prevents their collapse by lowering surface tension?",
+        options: [
+            "Mucus.",
+            "Elastin.",
+            "Surfactant.",
+            "Collagen."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: Surfactant, a lipoprotein secreted by alveolar cells, lowers surface tension and prevents alveolar collapse."
+    },
+    {
+        question: "During inspiration, the diaphragm contracts and flattens. What is the immediate consequence for the thoracic cavity volume?",
+        options: [
+            "It remains unchanged.",
+            "It decreases.",
+            "It increases.",
+            "It fluctuates rapidly."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: During Inspiration, the Diaphragm contracts and flattens (moves downward), which increases the volume of the thoracic cavity."
+    },
+    {
+        question: "Which of the following would lead to an increase in lung pressure above atmospheric pressure, forcing air out?",
+        options: [
+            "Contraction of the diaphragm.",
+            "Relaxation of external intercostal muscles.",
+            "Increase in thoracic cavity volume.",
+            "Contraction of external intercostal muscles."
+        ],
+        correctAnswer: 1,
+        reasoning: "The Book theory State that: During expiration, external intercostal muscles relax, decreasing the volume of the thoracic cavity, increasing pressure in the lungs to above atmospheric pressure, forcing air out."
+    },
+    {
+        question: "Voluntary control over breathing, such as for speech or singing, originates from which part of the brain?",
+        options: [
+            "Medulla oblongata.",
+            "Pons.",
+            "Cerebral hemispheres.",
+            "Cerebellum."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: Voluntary Control over breathing is possible within limits, originating from the cerebral hemispheres, used for forced breathing, speech, singing, sneezing, and coughing."
+    },
+    {
+        question: "In the transport of carbon dioxide, what process involves chloride ions moving into RBCs to maintain electrical balance after HCO3- diffuses into the plasma?",
+        options: [
+            "Oxygen-Haemoglobin Dissociation.",
+            "Chloride Shift (Hamburger's phenomenon).",
+            "Bohr Effect.",
+            "Haldane Effect."
+        ],
+        correctAnswer: 1,
+        reasoning: "The Book theory State that: HCO3- diffuses into the plasma, and Chloride Shift (Hamburger's phenomenon) occurs where chloride ions (Cl-) move into RBCs to maintain electrical balance."
+    },
+    {
+        question: "Which respiratory pigment has a higher affinity for oxygen and releases it when PO2 is very low (below 20 mmHg)?",
+        options: [
+            "Haemoglobin.",
+            "Carbaminohaemoglobin.",
+            "Oxyhaemoglobin.",
+            "Myoglobin."
         ],
         correctAnswer: 3,
-        reasoning: "The text specifies: 'Dissolved in Plasma: Approximately 3% of oxygen is transported dissolved in the plasma.'"
+        reasoning: "The Book theory State that: Myoglobin has higher affinity for oxygen and acts as an oxygen store in muscles, releasing oxygen when PO2 is very low (below 20 mmHg)."
     },
     {
-        question: "Carbonic anhydrase is an enzyme crucial for the formation of carbonic acid from:",
+        question: "Why do chemicals in cigarette smoke lead to a 'smoker's cough'?",
         options: [
-            "Oxygen and water",
-            "Carbon dioxide and hydrogen ions",
-            "Carbon dioxide and water",
-            "Bicarbonate ions and hydrogen ions"
+            "They cause permanent damage to alveoli.",
+            "They damage cilia, preventing mucus clearance.",
+            "They irritate air passages and lungs.",
+            "They increase the oxygen-carrying capacity of blood."
         ],
         correctAnswer: 2,
-        reasoning: "The text explains: 'CO2 diffuses... combines with water (H2O) to form carbonic acid (H2CO3) via carbonic anhydrase enzyme.'"
+        reasoning: "The Book theory State that: Chemicals in smoke irritate air passages and lungs, causing 'smoker's cough'."
     },
     {
-        question: "The phenomenon where chloride ions diffuse from plasma into RBCs to maintain ionic balance during CO2 transport is known as:",
+        question: "Birds are noted for their highly efficient respiratory systems. What is a key characteristic contributing to this efficiency?",
         options: [
-            "Bohr effect",
-            "Haldane effect",
-            "Chloride Shift",
-            "Oxygen-haemoglobin dissociation"
+            "Haemoglobin with low oxygen affinity.",
+            "The presence of residual volume in their lungs.",
+            "One-way air flow with large air sacs.",
+            "A respiratory center insensitive to CO2 levels."
         ],
         correctAnswer: 2,
-        reasoning: "The text describes: 'Chloride Shift (Hamburger's Phenomenon): HCO3- diffuses out of RBCs into plasma. Chloride ions (Cl-) diffuse from plasma into RBCs to maintain ionic balance.'"
+        reasoning: "The Book theory State that: Birds have highly efficient respiratory systems due to haemoglobin with high oxygen affinity, extensive capillary networks, one-way air flow (no residual volume), and large air sacs."
     },
     {
-        question: "Haemoglobin is characterized by being composed of four polypeptide chains, each containing:",
+        question: "A patient presents with symptoms of tissue hypoxia and has 'cherry-red' lips. Based on the provided information, which substance is most likely responsible?",
         options: [
-            "A single oxygen molecule",
-            "An iron-containing haem group",
-            "A globin portion only",
-            "A phosphate group"
+            "Excessive carbon dioxide.",
+            "Insufficient oxygen.",
+            "Carbon monoxide.",
+            "High levels of nitrogen."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: Carbon Monoxide (CO) poisoning leads to tissue hypoxia and 'cherry-red' lips, as CO binds to haemoglobin 249 times more readily than oxygen, preventing oxygen transport."
+    },
+    {
+        question: "An individual experiences a reduced ability to filter dust and pathogens from inhaled air. Which specific part of the upper respiratory tract's defense mechanism is likely impaired?",
+        options: [
+            "The vocal cords in the larynx.",
+            "The C-shaped cartilages in the trachea.",
+            "The mucous membranes and cilia in the nasal cavities.",
+            "The epiglottis preventing food entry."
+        ],
+        correctAnswer: 2,
+        reasoning: "The Book theory State that: Nose hairs, mucus, and cilia in the nasal cavities filter out pathogens, dust, and particulate matter. Impairment of these would reduce filtering ability."
+    },
+    {
+        question: "If the C-shaped cartilage pieces in the trachea were to become a continuous, rigid ring, what would be the most likely negative consequence?",
+        options: [
+            "Enhanced flexibility for head movements.",
+            "Obstruction of the esophagus located posteriorly.",
+            "Improved airflow due to increased rigidity.",
+            "Reduced warming and moistening of inhaled air."
         ],
         correctAnswer: 1,
-        reasoning: "The text states: 'Haemoglobin: Composed of four polypeptide chains (globin). Each chain has an iron-containing haem group.'"
+        reasoning: "The Book theory State that: The trachea is reinforced with 15-20 C-shaped cartilage pieces (open posteriorly) to prevent collapse. If they were a continuous ring, they would press on the posteriorly located esophagus, potentially obstructing swallowing. The open posterior design allows for esophageal expansion during food passage."
     },
     {
-        question: "A significant difference in oxygen affinity exists between haemoglobin and myoglobin, with myoglobin releasing oxygen only when PO2 is:",
+        question: "During a respiratory illness, surfactant production is severely diminished. What is the most direct and critical physiological consequence?",
         options: [
-            "Around 100 mmHg",
-            "Higher than 60 mmHg",
-            "Less than 20 mmHg",
-            "Similar to tissue PO2"
+            "Increased resistance in the bronchioles.",
+            "Impaired warming and moistening of inhaled air.",
+            "Collapse of alveoli and reduced gas exchange.",
+            "Decreased oxygen-carrying capacity of haemoglobin."
         ],
         correctAnswer: 2,
-        reasoning: "The text notes: 'Myoglobin: ...Higher affinity than haemoglobin (releases O2 when PO2 < 20 mmHg).'"
+        reasoning: "The Book theory State that: Surfactant is a lipoprotein secreted by alveolar cells that lowers surface tension and prevents alveolar collapse. Diminished surfactant would directly lead to alveolar collapse and thus reduced gas exchange."
     },
     {
-        question: "One major effect of smoking on the respiratory system is the permanent damage to:",
+        question: "A patient is struggling to exhale forcibly after normal breathing. Which muscles are primarily impaired if they cannot contribute to this process?",
         options: [
-            "Nasal cartilages",
-            "Alveoli",
-            "Bronchial cartilage plates",
-            "Phrenic nerves"
-        ],
-        correctAnswer: 1,
-        reasoning: "The text explicitly states smoking 'Leads to permanent damage to air sacs (alveoli).'"
-    },
-    {
-        question: "If a patient experiences a severe reduction in the secretion of surfactant within their alveoli, what is the most likely immediate physiological consequence?",
-        options: [
-            "Enhanced gas exchange efficiency due to drier surfaces.",
-            "Increased resistance to airflow in the bronchioles.",
-            "Alveolar collapse, making breathing difficult.",
-            "Rapid bacterial growth within the lungs."
+            "Diaphragm and external intercostals.",
+            "External intercostals only.",
+            "Internal intercostals and abdominal muscles.",
+            "Pectoralis major and sternocleidomastoid."
         ],
         correctAnswer: 2,
-        reasoning: "The text states that surfactant 'lowers surface tension, prevents alveolar collapse'. A reduction would therefore lead to collapse."
+        reasoning: "The Book theory State that: Expiration is normally passive, but in forced exhalation, internal intercostal muscles contract, and abdominal muscles also contribute to actively push air out. If these are impaired, forcible exhalation would be difficult."
     },
     {
-        question: "A person holds their breath for an extended period. Which part of their brain would eventually override the voluntary control to initiate breathing, primarily due to rising CO2 levels?",
+        question: "An athlete performs high-intensity, anaerobic exercise. Which respiratory pigment would be crucial for releasing stored oxygen to muscle cells when haemoglobin's supply is exhausted?",
         options: [
-            "Cerebral hemispheres",
-            "Pons",
-            "Limbic system",
-            "Medulla oblongata"
+            "Haemoglobin.",
+            "Oxyhaemoglobin.",
+            "Carbaminohaemoglobin.",
+            "Myoglobin."
         ],
         correctAnswer: 3,
-        reasoning: "The text mentions voluntary control from cerebral hemispheres but also involuntary control by the 'breathing center in the medulla oblongata'. The buffering of H+ ions (from CO2) to 'prevent pH drop' indicates the medulla's sensitivity to CO2/pH, which would eventually override voluntary breath-holding."
+        reasoning: "The Book theory State that: Myoglobin acts as an oxygen store in muscles, releasing oxygen when PO2 is very low (below 20 mmHg), especially when haemoglobin's oxygen supply is exhausted. This scenario fits high-intensity, anaerobic exercise."
     },
     {
-        question: "Consider a scenario where an individual suffers a spinal cord injury that severs the phrenic nerves. What would be the direct and severe consequence on their breathing mechanism?",
+        question: "If an individual develops a chronic condition that causes the permanent damage of air sacs, what specific respiratory disorder is most likely occurring?",
         options: [
-            "Inability to control external intercostal muscles.",
-            "Complete paralysis of the diaphragm, severely impairing inspiration.",
-            "Impaired vocal cord function.",
-            "Reduced ability to filter inspired air."
+            "Chronic bronchitis.",
+            "Pneumonia.",
+            "Asthma.",
+            "Emphysema."
         ],
-        correctAnswer: 1,
-        reasoning: "The text states: 'Breathing center communicates... with the diaphragm via phrenic nerves.' Severing these nerves would directly paralyze the diaphragm, which is crucial for inspiration."
+        correctAnswer: 3,
+        reasoning: "The Book theory State that: Smoking leads to permanent damage of air sacs (alveoli), which is a characteristic of emphysema."
     },
     {
-        question: "During vigorous exercise, tissues generate more CO2 and heat, and become more acidic. How would these changes collectively influence oxygen delivery from haemoglobin to the working muscles?",
+        question: "A scuba diver is using a breathing mixture with 35% O2 and 65% N2. This specialized gas mixture, mentioned in the context of SCUBA, is specifically called:",
         options: [
-            "Increase oxygen affinity, reducing release.",
-            "Decrease oxygen affinity, enhancing release.",
-            "Have no significant effect on oxygen release.",
-            "Convert oxyhaemoglobin to carbaminohaemoglobin."
-        ],
-        correctAnswer: 1,
-        reasoning: "The text states that oxygen binding to haemoglobin is 'influenced by partial pressure of O2, temperature, pH, and PCO2.' Higher temperature, lower pH (more acidic), and higher PCO2 (due to more CO2) all decrease haemoglobin's affinity for O2, promoting its release to tissues."
-    },
-    {
-        question: "A diver experiences 'the bends' (decompression sickness) due to dissolved gases forming bubbles in tissues upon rapid ascent. Which feature of SCUBA apparatus is specifically designed to manage the gas mixture for safer deep dives than regular air?",
-        options: [
-            "Compressed air tank capacity",
-            "The regulator for consistent pressure",
-            "Nitrox usage with altered O2/N2 ratio",
-            "The mask's sealing ability"
+            "Pure air.",
+            "Heliox.",
+            "Nitrox.",
+            "Trimix."
         ],
         correctAnswer: 2,
-        reasoning: "The text mentions 'SCUBA (Self-Contained Underwater Breathing Apparatus): Aqualung containing compressed air or Nitrox (e.g., 35% O2, 65% N2) for diving.' Nitrox specifically modifies the N2 content, which is the primary gas implicated in 'the bends'."
+        reasoning: "The Book theory State that: SCUBA (Self-Contained Underwater Breathing Apparatus): Aqualungs use compressed air or Nitrox (e.g., 35% O2, 65% N2) for underwater breathing."
     },
     {
-        question: "An individual is diagnosed with a condition that causes their bronchial tree to lose its cartilage plates progressively. What would be the most immediate anatomical consequence as a result?",
+        question: "Considering the properties required for an efficient respiratory surface, what is the primary benefit of having a good blood supply?",
         options: [
-            "The trachea would collapse easily.",
-            "The primary, secondary, and tertiary bronchi would lose structural support.",
-            "The smaller bronchioles would become non-functional.",
-            "Gas exchange in the alveoli would cease."
-        ],
-        correctAnswer: 1,
-        reasoning: "The text states: 'Secondary Bronchi: ...Contain cartilage plates.' and 'Tertiary Bronchi: Secondary bronchi divide into tertiary.' Bronchioles are specifically noted as having 'no cartilage'. Therefore, losing cartilage plates would affect the bronchi, not the trachea (which has C-shaped rings) or bronchioles."
-    },
-    {
-        question: "A substance inhaled into the respiratory tract paralyzes the cilia lining the airways. What is a direct physiological outcome of this paralysis?",
-        options: [
-            "Increased moisture in the inhaled air.",
-            "Impaired warming of incoming air.",
-            "Reduced filtration of particulate matter reaching the pharynx.",
-            "Enhanced vocalization due to smoother airways."
+            "To keep the surface moist and permeable.",
+            "To maintain the thinness of the membrane.",
+            "To facilitate efficient transport of gases away from or to the surface.",
+            "To increase the overall surface area for diffusion."
         ],
         correctAnswer: 2,
-        reasoning: "The text states that 'mucus and cilia move trapped substances to the pharynx for removal'. Paralysis of cilia would hinder this 'defense' mechanism, leading to reduced removal of particulate matter."
+        reasoning: "The Book theory State that: A Good Blood Supply is a property of the respiratory surface to facilitate efficient transport of gases."
     },
     {
-        question: "If a significant decrease (e.g., 20%) in ambient oxygen concentration occurs, what specific change in respiratory control is explicitly described by the text?",
+        question: "An increase in the partial pressure of oxygen (PO2) in the lungs leads to increased oxygen binding to haemoglobin. Conversely, a decrease in PO2 in active tissues leads to oxygen dissociation. What is the fundamental concept governing this reversible binding?",
         options: [
-            "Voluntary control takes over completely.",
-            "The breathing rate doubles.",
-            "The inspiratory center becomes inactive.",
-            "The expiratory center takes primary control."
-        ],
-        correctAnswer: 1,
-        reasoning: "The text states: 'Oxygen Concentration: Normally minor effect, but a significant drop (e.g., 20% decrease) can double breathing rate.'"
-    },
-    {
-        question: "In tissues, carbon dioxide combines with water inside red blood cells to form carbonic acid. What happens to the hydrogen ions produced from the dissociation of carbonic acid?",
-        options: [
-            "They are immediately transported out of the RBCs into the plasma.",
-            "They are buffered by haemoglobin, simultaneously facilitating O2 release.",
-            "They combine with bicarbonate ions to re-form carbonic acid.",
-            "They are directly converted into carbaminohaemoglobin."
-        ],
-        correctAnswer: 1,
-        reasoning: "The text states: 'H2CO3 dissociates into hydrogen ions (H+) and bicarbonate ions (HCO3-). Buffering: H+ ions are buffered by haemoglobin (forming HHb) to prevent pH drop, simultaneously releasing O2 to tissues.'"
-    },
-    {
-        question: "Bird respiration is noted for its efficiency at high altitudes. Which specific characteristic described contributes significantly to this advantage, beyond high-affinity haemoglobin?",
-        options: [
-            "The presence of a larger residual volume.",
-            "A reliance solely on cutaneous respiration.",
-            "A one-way air flow through the lungs.",
-            "Reduced number of capillaries around air sacs."
+            "The pH effect on haemoglobin structure.",
+            "The temperature-dependent stability of oxyhaemoglobin.",
+            "Oxygen Carrying Capacity, directly proportional to PO2.",
+            "The role of carbonic anhydrase in CO2 transport."
         ],
         correctAnswer: 2,
-        reasoning: "The text lists: 'Bird Respiration: Highly efficient due to high-affinity haemoglobin, many capillaries, one-way air flow (no residual volume), and large air sacs.' One-way air flow is a distinct factor."
+        reasoning: "The Book theory State that: Oxygen Carrying Capacity is the ability of haemoglobin to bind oxygen, directly proportional to the partial pressure of oxygen (PO2). The Oxygen-Haemoglobin Dissociation Curve illustrates that higher PO2 (e.g., in lungs) leads to more oxygen binding to haemoglobin, while lower PO2 (e.g., in tissues) leads to oxygen dissociation and release."
     },
     {
-        question: "The inner lining of the nasal cavities is described as having mucous membranes and cilia. How does this combined structural arrangement contribute to the defense function beyond simple trapping?",
+        question: "During the transport of CO2, H+ ions are formed in red blood cells. What specific component inside the RBCs prevents a significant drop in blood pH due to these ions?",
         options: [
-            "Cilia primarily sense chemical changes in the air, triggering immune responses.",
-            "Mucus provides an antimicrobial barrier, while cilia actively transport trapped pathogens towards the digestive system.",
-            "The membranes actively absorb harmful gases, and cilia ensure uniform distribution across the surface.",
-            "Both mucus and cilia work in tandem to warm the air more efficiently before it reaches the lungs."
+            "Carbonic anhydrase.",
+            "Plasma proteins.",
+            "Chloride ions.",
+            "Haemoglobin."
+        ],
+        correctAnswer: 3,
+        reasoning: "The Book theory State that: H2CO3 then dissociates into H+ and HCO3-. Haemoglobin buffers the H+ ions, preventing significant pH drop. This buffering action is critical for pH regulation during CO2 transport."
+    },
+    {
+        question: "Why is haemoglobin considered to have a lower affinity for oxygen compared to myoglobin, especially in the context of oxygen release?",
+        options: [
+            "Haemoglobin consists of only one polypeptide chain.",
+            "Haemoglobin loses oxygen at a higher partial pressure (e.g., 60 mmHg) compared to myoglobin.",
+            "Haemoglobin is found in muscles, storing oxygen for emergency use.",
+            "Haemoglobin binds only one oxygen molecule, limiting its capacity."
         ],
         correctAnswer: 1,
-        reasoning: "The text states: 'Lined by mucous membranes and cilia.' and 'Functions: Filtration: Hairs, mucus, and cilia trap harmful pathogens... Defense: Mucus and cilia move trapped substances to the pharynx for removal.' This implies active removal of trapped substances, which are then typically swallowed."
+        reasoning: "The Book theory State that: Haemoglobin loses oxygen at a higher PO2 (e.g., 60 mmHg) compared to myoglobin. Less affinity for oxygen. Myoglobin has higher affinity for oxygen and releases oxygen when PO2 is very low (below 20 mmHg)."
     },
     {
-        question: "Consider the detailed mechanism of CO2 transport. The 'Chloride Shift' is a crucial event. If the transport of bicarbonate ions out of the RBCs were suddenly inhibited, what would be the most profound and immediate consequence on blood pH in the tissues?",
+        question: "A person is suspected of having a damaged medulla oblongata due to trauma. What direct consequence on their breathing control would be most immediately life-threatening?",
         options: [
-            "pH would increase significantly due to reduced H+ production.",
-            "pH would decrease significantly due to accumulated H+ inside RBCs.",
-            "pH would remain stable as other buffer systems compensate completely.",
-            "pH would decrease slightly, but only in the plasma, not in RBCs."
-        ],
-        correctAnswer: 1,
-        reasoning: "The text describes: 'H2CO3 dissociates into hydrogen ions (H+) and bicarbonate ions (HCO3-). Buffering: H+ ions are buffered by haemoglobin (forming HHb) to prevent pH drop...' If HCO3- cannot leave the RBC, the accumulation of H+ inside would overwhelm the buffering capacity of haemoglobin, leading to a significant drop in intracellular pH, which would then impact overall blood pH."
-    },
-    {
-        question: "The text states that oxygen concentration normally has a minor effect on breathing control, but a significant drop can double the breathing rate. Conversely, the mechanism of CO2 transport explicitly details the buffering of H+ ions by haemoglobin to 'prevent pH drop.' Based on this, which gas's concentration change is the more potent and continuous regulator of baseline breathing rate in normal physiological conditions?",
-        options: [
-            "Oxygen, as it directly binds to haemoglobin.",
-            "Carbon dioxide, primarily through its influence on blood pH.",
-            "Both gases contribute equally as chemoreceptors are sensitive to both.",
-            "Neither, as voluntary control predominates."
-        ],
-        correctAnswer: 1,
-        reasoning: "The text describes O2 having a 'minor effect' normally, while the detailed mechanism for CO2 transport heavily involves buffering H+ to 'prevent pH drop'. This implies that maintaining pH (and thus regulating CO2 levels) is a more crucial and continuous physiological drive for breathing control than minor fluctuations in O2."
-    },
-    {
-        question: "Alveoli are described as being lined with moist squamous epithelium and surrounded by a dense network of blood capillaries, with walls 0.1 µm thick. Which combination of these features is most critical for maximizing the *rate* of gas exchange?",
-        options: [
-            "Moisture and squamous epithelium, primarily reducing friction.",
-            "Dense capillary network and squamous epithelium, ensuring structural integrity.",
-            "Thinness and dense capillary network, creating a short diffusion path and maintaining a steep gradient.",
-            "Squamous epithelium and moist lining, preventing alveolar collapse."
+            "Inability to voluntarily hold their breath.",
+            "Reduced capacity to sing or speak loudly.",
+            "Loss of involuntary breathing rhythm and depth.",
+            "Impaired ability to sneeze or cough forcefully."
         ],
         correctAnswer: 2,
-        reasoning: "The text lists 'Thin: Diffusion is efficient over distances of 1 mm or less (e.g., 0.1 µm for alveoli)' and 'Good blood supply: Facilitates transport of gases. Good ventilation mechanism: Maintains a steep diffusion gradient.' The combination of a thin wall (short diffusion path) and a dense capillary network (maintaining a steep gradient by removing/delivering gases) is crucial for a high rate of diffusion."
+        reasoning: "The Book theory State that: Breathing is largely an involuntary process, controlled by a breathing center in the medulla oblongata of the brain. Damage would lead to a loss of this essential involuntary control, which is immediately life-threatening."
     },
     {
-        question: "Carbon monoxide (CO) poisoning is described as CO binding to haemoglobin with 249 times greater affinity than O2, preventing O2 transport and release. Considering the physiological consequences, why would this high affinity be significantly more dangerous than, for example, a substance that merely competed equally with O2 for binding sites?",
+        question: "Which specific division of the respiratory system is solely involved in respiratory function and not also shared with the digestive system?",
         options: [
-            "It prevents CO2 transport more effectively, leading to acidosis.",
-            "It irreversibly binds to haemoglobin, permanently deactivating it.",
-            "Even in low concentrations, CO effectively monopolizes haemoglobin, leading to severe oxygen deprivation despite ample environmental O2.",
-            "It directly damages red blood cells, reducing their oxygen-carrying capacity."
+            "Pharynx.",
+            "Oropharynx.",
+            "Nasopharynx.",
+            "Laryngopharynx."
         ],
         correctAnswer: 2,
-        reasoning: "The '249 times greater affinity' means CO will preferentially bind to haemoglobin even when O2 is abundant and CO is present in very low concentrations, thereby blocking O2 binding and transport more effectively than a mere competitive binder with equal affinity."
-    },
-    {
-        question: "The 'Oxygen-Haemoglobin Dissociation Curve' illustrates the relationship between partial pressure of O2 and haemoglobin saturation, where higher PO2 leads to higher saturation. Given that ~5 ml O2 is released to tissues per 100 ml blood, what does this curve fundamentally imply about haemoglobin's efficiency in oxygen delivery?",
-        options: [
-            "Haemoglobin maintains maximum saturation even at very low tissue PO2.",
-            "Haemoglobin releases its entire oxygen load instantaneously upon reaching tissues.",
-            "Haemoglobin's affinity for oxygen is finely tuned to release oxygen progressively as tissue oxygen demand increases (PO2 decreases).",
-            "Oxygen release is primarily dictated by the total volume of blood flow, not PO2."
-        ],
-        correctAnswer: 2,
-        reasoning: "The curve shows a variable relationship, not an all-or-nothing release. The fact that '~5 ml O2 is released' (not all 20 ml O2 capacity) indicates a progressive and regulated release tailored to local tissue needs, where lower PO2 drives more release."
-    },
-    {
-        question: "If a person consciously holds their breath, which physiological mechanism would most likely act as the ultimate involuntary trigger to resume breathing, even against conscious effort?",
-        options: [
-            "Extreme drop in blood oxygen concentration.",
-            "Accumulation of CO2, leading to a drop in blood pH sensed by the medulla.",
-            "Direct neural fatigue of the inspiratory muscles.",
-            "Activation of the limbic system due to emotional stress."
-        ],
-        correctAnswer: 1,
-        reasoning: "The text states 'Oxygen Concentration: Normally minor effect' on breathing rate. However, the comprehensive CO2 transport mechanism involving the formation of H+ ions and subsequent buffering to 'prevent pH drop' highlights the body's strong sensitivity to CO2/pH changes, making it the primary and ultimate trigger for respiratory drive, overriding voluntary control."
-    },
-    {
-        question: "Consider bird respiration, characterized by one-way air flow and no residual volume. How does the absence of residual volume specifically contribute to their highly efficient gas exchange compared to human lungs?",
-        options: [
-            "It reduces the total lung capacity, making them lighter for flight.",
-            "It ensures that fresh, oxygen-rich air is continuously available for exchange without mixing with stale air.",
-            "It increases the mechanical work required for inspiration.",
-            "It allows for greater diffusion distances between air and blood."
-        ],
-        correctAnswer: 1,
-        reasoning: "The text highlights 'one-way air flow (no residual volume)' as a factor for bird respiration's 'highly efficient' nature. In humans, residual volume means inhaled fresh air mixes with stale air, diluting the oxygen concentration. The absence of residual volume in birds means a consistently higher oxygen partial pressure available for exchange, maximizing the gradient."
-    },
-    {
-        question: "Myoglobin has a higher affinity for O2 than haemoglobin, releasing O2 when PO2 < 20 mmHg, compared to haemoglobin releasing at ~PO2 60 mmHg. This difference is critical because:",
-        options: [
-            "It allows myoglobin to scavenge oxygen from haemoglobin in the lungs.",
-            "Myoglobin acts as a short-term oxygen storage, only releasing it when muscle tissue is severely oxygen-depleted.",
-            "Haemoglobin needs to release oxygen at higher partial pressures to sustain basic cellular functions in most tissues.",
-            "Myoglobin's lower affinity ensures that muscles get oxygen before other vital organs."
-        ],
-        correctAnswer: 1,
-        reasoning: "The text states myoglobin 'Stores oxygen in resting muscle' and has a 'Higher affinity than haemoglobin (releases O2 when PO2 < 20 mmHg)'. This high affinity and release only at very low PO2 implies it holds onto oxygen until the muscle's oxygen demand is critically high or stores it for later use."
-    },
-    {
-        question: "The transport of carbon dioxide involves 70% as bicarbonate ions, 23% as carbaminohaemoglobin, and 7% dissolved in plasma. Why is the conversion to bicarbonate ions, facilitated by carbonic anhydrase and followed by the chloride shift, considered the most significant and complex mechanism for CO2 transport?",
-        options: [
-            "It directly provides energy for cellular activities.",
-            "It allows for the transport of a large volume of CO2 while simultaneously buffering H+ ions to maintain blood pH.",
-            "It promotes the binding of oxygen to haemoglobin in the tissues.",
-            "It prevents the accumulation of CO2 in the alveoli."
-        ],
-        correctAnswer: 1,
-        reasoning: "The text clearly outlines that 'Approximately 70% of CO2' is transported via this pathway, and crucial 'Buffering: H+ ions are buffered by haemoglobin... to prevent pH drop'. This mechanism handles the majority of CO2 transport and is vital for maintaining blood pH homeostasis, making it the most significant and complex."
+        reasoning: "The Book theory State that: The Pharynx is divided into Nasopharynx (respiratory function), Oropharynx (swallowing), and Laryngopharynx (where respiratory and digestive tracts diverge). Only the nasopharynx is indicated as having solely respiratory function here."
     }
 ];
 
 // Constants
-const QUIZ_ACCESS_CODE = "WCW-RES-001";
-const DEV_ACCESS_CODE = "Dev-PDA-001";
-const ACADEMY_NAME = "WHITE COAT WORRIORS";
+const QUIZ_ACCESS_CODE = "PreMium-A-12345";
+const DEV_ACCESS_CODE = "Dev-WCW-001";
+const ACADEMY_NAME = "WHITE COAT WORRIORS ";
 const QUIZ_SUBJECT = "Respiration ";
 const WEBSITE_LINK = "https://premiumdoctoracademy.com";
 const WHATSAPP_CONTACT = "03287743851";
@@ -1681,8 +2011,8 @@ const MARK_PER_MCQ = 1;
 const NEGATIVE_MARKING = 0;
 
 // Global state variables
-let currentQuizId = 'WCW-RES-001';
-let quizData = quizData_WCW_RES_001;
+let currentQuizId = 'WCW-BIO-01';
+let quizData = quizData_WCW_BIO_01;
 let currentQuestion = 0;
 let userAnswers = Array(quizData.length).fill(null);
 let timeLeft;
@@ -1918,7 +2248,7 @@ function handleRegistration() {
     
     
     // Start the quiz after registration
-    startQuiz('WCW-RES-001', 'Student', generatedCode);
+    startQuiz('WCW-BIO-01', 'Student', generatedCode);
 }
 
 // Quiz Access Handler
@@ -1926,7 +2256,7 @@ function checkDeveloperPassword() {
     devErrorBox.style.display = 'none';
     if (devPasswordInput.value === DEV_ACCESS_CODE) {
         showQuizNotification('Access Granted', 'Welcome! You have successfully logged in as a developer.', 'info');
-        startQuiz('WCW-RES-001', 'Developer', DEV_ACCESS_CODE);
+        startQuiz('WCW-BIO-01', 'Developer', DEV_ACCESS_CODE);
     } else {
         devErrorBox.style.display = 'block';
     }
@@ -1940,7 +2270,7 @@ function accessQuiz(inputCode) {
     
     if (inputCode === QUIZ_ACCESS_CODE || inputCode === DEV_ACCESS_CODE || inputCode === storedStudentCode) {
         showQuizNotification('Access Granted', 'Welcome! You can now start the quiz.', 'info');
-        startQuiz('WCW-RES-001', 'Student', inputCode);
+        startQuiz('WCW-BIO-01', 'Student', inputCode);
     } else {
         errorBox.style.display = 'block';
     }
@@ -1948,7 +2278,7 @@ function accessQuiz(inputCode) {
 
 function startQuiz(quizId, userType, code) {
     currentQuizId = quizId;
-    quizData = quizData_WCW_RES_001;
+    quizData = quizData_WCW_BIO_01;
     
     // Always start fresh - no progress restoration
     currentQuestion = 0;
@@ -2234,7 +2564,7 @@ function submitTest(isTimeout = false) {
 
 function restartTest() {
     if (confirm('Are you sure you want to retake the full test? Your current progress will be lost.')) {
-        quizData = quizData_WCW_RES_001;
+        quizData = quizData_WCW_BIO_01;
         currentQuestion = 0;
         userAnswers = Array(quizData.length).fill(null);
         timeLeft = quizData.length * TIME_PER_MCQ;
@@ -2256,7 +2586,7 @@ function retakeIncorrect() {
         return;
     }
     
-    quizData = incorrectIndices.map(index => quizData_WCW_RES_001[index]);
+    quizData = incorrectIndices.map(index => quizData_WCW_BIO_01[index]);
     currentQuestion = 0;
     userAnswers = Array(quizData.length).fill(null);
     timeLeft = quizData.length * TIME_PER_MCQ;
@@ -2267,7 +2597,7 @@ function retakeIncorrect() {
 
 function viewAllMcqs() {
     allMcqsList.innerHTML = '';
-    quizData_WCW_RES_001.forEach((question, index) => {
+    quizData_WCW_BIO_01.forEach((question, index) => {
         const mcqItem = document.createElement('div');
         mcqItem.classList.add('all-mcq-item');
         mcqItem.innerHTML = `
