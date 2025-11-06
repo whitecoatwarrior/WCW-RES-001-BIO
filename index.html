@@ -1,0 +1,2289 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><meta name='viewport' content='width=device-width, initial-scale=1'/><meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHITE COAT WARRIORS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* All CSS styles remain the same as in the original file */
+        :root {
+            --primary-blue: #1a56db;
+            --secondary-blue: #0ea5e9;
+            --dark-blue: #1e3a8a;
+            --light-blue: #dbeafe;
+            --accent-green: #10b981;
+            --accent-orange: #f59e0b;
+            --accent-red: #ef4444;
+            --accent-purple: #8b5cf6;
+            --accent-pink: #ec4899;
+            --accent-teal: #14b8a6;
+            --accent-yellow: #fbbf24;
+            --accent-amber: #f59e0b;
+            --vibrant-blue: #3b82f6;
+            --vibrant-green: #22c55e;
+            --vibrant-purple: #a855f7;
+            --vibrant-pink: #e879f9;
+            --gradient-blue: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            --gradient-green: linear-gradient(135deg, var(--accent-green), #34d399);
+            --gradient-orange: linear-gradient(135deg, var(--accent-orange), #f97316);
+            --gradient-red: linear-gradient(135deg, var(--accent-red), #f87171);
+            --gradient-purple: linear-gradient(135deg, var(--accent-purple), #a78bfa);
+            --gradient-pink: linear-gradient(135deg, var(--accent-pink), #f472b6);
+            --gradient-teal: linear-gradient(135deg, var(--accent-teal), #2dd4bf);
+            --gradient-yellow: linear-gradient(135deg, var(--accent-yellow), #f59e0b);
+            --gradient-vibrant: linear-gradient(135deg, #4f46e5, #7c3aed, #ec4899);
+            --shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 2px 5px rgba(0, 0, 0, 0.08);
+            --shadow-xl: 0 5px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 6px;
+            color: #1e3a8a;
+            font-size: 8.25px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 9px;
+        }
+
+        .logo h1 {
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: var(--dark-blue);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.08);
+            margin-bottom: 1.5px;
+            background: var(--gradient-vibrant);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo p {
+            color: var(--primary-blue);
+            font-weight: 600;
+            font-size: 0.525rem;
+        }
+
+        .page {
+            background: white;
+            border-radius: 9px;
+            padding: 9px;
+            box-shadow: var(--shadow-xl);
+            width: 100%;
+            display: none;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+            backdrop-filter: blur(10px);
+        }
+
+        .active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .promo-banner {
+            background: var(--gradient-vibrant);
+            color: white;
+            padding: 11.25px;
+            border-radius: 7.5px;
+            margin-bottom: 11.25px;
+            text-align: center;
+            font-size: 0.45rem;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .promo-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+            z-index: 1;
+        }
+
+        .promo-banner h2 {
+            font-size: 0.675rem;
+            margin-bottom: 6px;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 2;
+        }
+
+        .promo-banner p {
+            line-height: 1.4;
+            text-align: justify;
+            position: relative;
+            z-index: 2;
+        }
+
+        .form-group {
+            margin-bottom: 6px;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 1.5px;
+            font-weight: 600;
+            color: var(--dark-blue);
+            font-size: 0.525rem;
+        }
+
+        .form-input, .form-select {
+            width: 100%;
+            padding: 4.5px 6.75px;
+            border: 1.5px solid var(--light-blue);
+            border-radius: 3.75px;
+            font-size: 0.525rem;
+            background: #f8fafc;
+            transition: all 0.2s;
+        }
+
+        .form-input:focus, .form-select:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 2px rgba(26, 86, 219, 0.15);
+        }
+
+        .input-container {
+            position: relative;
+        }
+
+        .password-container .form-input {
+            padding-right: 22.5px;
+        }
+
+        .input-icon {
+            position: absolute;
+            right: 7.5px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-blue);
+            font-size: 0.525rem;
+            cursor: pointer;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4.5px 7.5px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.525rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            gap: 3px;
+            width: 100%;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: var(--gradient-blue);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(26, 86, 219, 0.2);
+        }
+
+        .btn-contact {
+            background: var(--gradient-green);
+            color: white;
+        }
+
+        .btn-contact:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(16, 185, 129, 0.2);
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(37, 211, 102, 0.2);
+        }
+
+        .btn-purple {
+            background: var(--gradient-purple);
+            color: white;
+        }
+
+        .btn-purple:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(139, 92, 246, 0.2);
+        }
+
+        .btn-red {
+            background: var(--gradient-red);
+            color: white;
+        }
+
+        .btn-red:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
+        }
+
+        .btn-orange {
+            background: var(--gradient-orange);
+            color: white;
+        }
+
+        .btn-orange:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(245, 158, 11, 0.2);
+        }
+
+        .error-box {
+            background: #fee2e2;
+            color: var(--accent-red);
+            padding: 3.75px 5.25px;
+            border-radius: 2.25px;
+            margin-top: 4.5px;
+            display: none;
+            font-weight: 600;
+            font-size: 0.525rem;
+            border-left: 2.25px solid var(--accent-red);
+        }
+
+        .success-box {
+            background: #d1fae5;
+            color: var(--accent-green);
+            padding: 3.75px 5.25px;
+            border-radius: 2.25px;
+            margin-top: 4.5px;
+            display: none;
+            font-weight: 600;
+            font-size: 0.525rem;
+            border-left: 2.25px solid var(--accent-green);
+        }
+
+        .notification-box {
+            background: #fef3c7;
+            color: #d97706;
+            padding: 7.5px;
+            border-radius: 4.5px;
+            margin-top: 7.5px;
+            font-weight: 600;
+            font-size: 0.525rem;
+            text-align: center;
+            border-left: 3px solid #f59e0b;
+        }
+
+        .quiz-notification {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            background: white;
+            padding: 11.25px;
+            border-radius: 7.5px;
+            box-shadow: var(--shadow-xl);
+            z-index: 1000;
+            display: none;
+            max-width: 225px;
+            border-left: 3.75px solid var(--accent-green);
+            animation: slideInRight 0.3s ease;
+            transform: translateX(100%);
+        }
+
+        .quiz-notification.show {
+            display: block;
+            transform: translateX(0);
+        }
+
+        .quiz-notification.warning {
+            border-left-color: var(--accent-orange);
+        }
+
+        .quiz-notification.error {
+            border-left-color: var(--accent-red);
+        }
+
+        .quiz-notification-content {
+            display: flex;
+            flex-direction: column;
+            gap: 7.5px;
+        }
+
+        .quiz-notification-title {
+            font-weight: 700;
+            font-size: 0.6rem;
+            color: var(--dark-blue);
+        }
+
+        .quiz-notification-message {
+            font-size: 0.525rem;
+            color: #4b5563;
+        }
+
+        .quiz-notification-actions {
+            display: flex;
+            gap: 6px;
+            justify-content: flex-end;
+        }
+
+        .quiz-notification-btn {
+            padding: 3px 6px;
+            border-radius: 3px;
+            font-size: 0.4875rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+        }
+
+        .quiz-notification-btn.primary {
+            background: var(--gradient-blue);
+            color: white;
+        }
+
+        .quiz-notification-btn.secondary {
+            background: #f3f4f6;
+            color: #4b5563;
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+
+        .main-page-buttons {
+            display: grid;
+            gap: 6px;
+            margin-top: 9px;
+        }
+
+        .quiz-access-section {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            margin-top: 9px;
+        }
+
+        .quiz-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 6px;
+            padding-bottom: 4.5px;
+            border-bottom: 1.5px solid var(--light-blue);
+        }
+
+        .quiz-title-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2.25px;
+            width: 80%;
+        }
+
+        .quiz-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 6px;
+            font-size: 0.525rem;
+            color: var(--dark-blue);
+            font-weight: 600;
+        }
+
+        .timer-container {
+            display: flex;
+            gap: 4.5px;
+            justify-content: flex-end;
+            width: 100%;
+        }
+
+        .timer, .question-timer {
+            background: var(--gradient-blue);
+            color: white;
+            padding: 2.25px 4.5px;
+            border-radius: 7.5px;
+            font-weight: 700;
+            font-size: 0.525rem;
+            box-shadow: var(--shadow);
+            white-space: nowrap;
+        }
+
+        .timer.total-timer {
+            background: var(--gradient-orange);
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 4.5px;
+            background: #e5e7eb;
+            border-radius: 2.25px;
+            overflow: hidden;
+            margin-bottom: 6px;
+            box-shadow: var(--shadow);
+        }
+
+        .progress-bar {
+            height: 100%;
+            border-radius: 2.25px;
+            transition: width 0.4s ease;
+            background: var(--gradient-vibrant);
+        }
+
+        .question-nav {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(10.5px, 1fr));
+            gap: 2.25px;
+            margin-bottom: 6px;
+        }
+
+        .question-nav-item {
+            width: 10.5px;
+            height: 10.5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2.25px;
+            font-weight: 700;
+            font-size: 0.375rem;
+            cursor: pointer;
+            background: white;
+            border: 1.5px solid var(--light-blue);
+            transition: all 0.2s;
+        }
+
+        .question-nav-item.current {
+            background: var(--gradient-vibrant);
+            color: white;
+            border-color: var(--primary-blue);
+            transform: scale(1.1);
+        }
+
+        .question-nav-item.solved {
+            background: var(--gradient-green);
+            color: white;
+            border-color: var(--accent-green);
+        }
+
+        .question-nav-item.visited {
+            background: var(--gradient-orange);
+            color: white;
+            border-color: var(--accent-orange);
+        }
+
+        .question-container {
+            margin-bottom: 6px;
+        }
+
+        .question-text {
+            font-size: 0.5625rem;
+            font-weight: 700;
+            margin-bottom: 4.5px;
+            color: var(--dark-blue);
+        }
+
+        .options-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3px;
+            margin-bottom: 6px;
+        }
+
+        .option {
+            padding: 3.75px 6px;
+            border: 1.5px solid var(--light-blue);
+            border-radius: 3.75px;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: 500;
+            background: #f8fafc;
+            font-size: 0.525rem;
+            position: relative;
+        }
+
+        .option:hover {
+            border-color: var(--primary-blue);
+            background: #e0f2fe;
+            transform: translateY(-1px);
+        }
+
+        .option.selected {
+            border-color: var(--primary-blue);
+            background: #dbeafe;
+        }
+
+        .option.correct {
+            border-color: var(--accent-green);
+            background: #d1fae5;
+        }
+
+        .option.incorrect {
+            border-color: var(--accent-red);
+            background: #fee2e2;
+        }
+
+        .option input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .reasoning {
+            background: #f8fafc;
+            border-radius: 3.75px;
+            padding: 6px;
+            margin-top: 6px;
+            display: none;
+            border-left: 2.25px solid var(--primary-blue);
+            font-size: 0.525rem;
+        }
+
+        .reasoning-title {
+            font-weight: 700;
+            margin-bottom: 3px;
+            color: var(--dark-blue);
+            font-size: 0.5625rem;
+        }
+
+        .navigation-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            margin-top: 9px;
+        }
+
+        .nav-btn {
+            padding: 3.75px 5.25px;
+            border-radius: 3.75px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+            font-size: 0.525rem;
+            display: flex;
+            align-items: center;
+            gap: 2.25px;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .btn-back {
+            background: linear-gradient(135deg, #3b82f6, #60a5fa);
+            color: white;
+        }
+
+        .btn-next {
+            background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+            color: white;
+        }
+
+        .btn-reasoning {
+            background: var(--gradient-purple);
+            color: white;
+        }
+
+        .btn-reasoning.disabled {
+            background: #dc3545;
+            color: white;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        .btn-reasoning.disabled:hover {
+            background: #dc3545;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .btn-submit {
+            background: var(--gradient-green);
+            color: white;
+        }
+
+        .results-header-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 3.75px;
+            margin-bottom: 9px;
+        }
+
+        .results-header-buttons .btn {
+            padding: 3px 4.5px;
+            font-size: 0.4875rem;
+            width: 100%;
+        }
+
+        .result-card {
+            background: linear-gradient(135deg, #f8fafc, #e0f2fe);
+            border-radius: 6px;
+            padding: 9px;
+            text-align: center;
+            margin-bottom: 9px;
+            box-shadow: var(--shadow);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .result-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-vibrant);
+        }
+
+        .result-card h2 {
+            font-size: 0.675rem;
+            margin-bottom: 6px;
+            color: var(--dark-blue);
+        }
+
+        .result-card table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.525rem;
+            margin-top: 6px;
+            box-shadow: var(--shadow);
+        }
+
+        .result-card th, .result-card td {
+            padding: 3.75px;
+            border: 1px solid #dbeafe;
+            text-align: left;
+        }
+
+        .result-card th {
+            background-color: var(--light-blue);
+            font-weight: 600;
+        }
+
+        .result-card td {
+            background-color: #f8fafc;
+        }
+
+        .result-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 4.5px;
+            margin-top: 9px;
+        }
+
+        .all-mcqs-list {
+            display: flex;
+            flex-direction: column;
+            gap: 11.25px;
+        }
+
+        .all-mcq-item {
+            padding: 7.5px;
+            border: 1px solid var(--light-blue);
+            border-radius: 6px;
+            background: #f8fafc;
+            position: relative;
+        }
+
+        .all-mcq-item .question-text {
+            color: var(--dark-blue);
+            font-size: 0.6rem;
+            font-weight: 700;
+        }
+
+        .all-mcq-options {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            margin-top: 4.5px;
+        }
+
+        .all-mcq-option {
+            font-size: 0.525rem;
+            padding: 3px 4.5px;
+            border-radius: 3px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .all-mcq-option.correct {
+            background: #d1fae5;
+            color: var(--accent-green);
+            font-weight: 600;
+            border-color: #a7f3d0;
+        }
+
+        .all-mcq-reasoning {
+            margin-top: 6px;
+            font-size: 0.525rem;
+            color: #4b5563;
+            padding: 6px;
+            background: #f8fafc;
+            border-radius: 3px;
+            border-left: 2.25px solid var(--primary-blue);
+        }
+
+        .all-mcq-reasoning strong {
+            color: var(--dark-blue);
+        }
+
+        .quick-stats {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 9px;
+            gap: 6px;
+        }
+
+        .stat-card {
+            flex: 1;
+            background: white;
+            border-radius: 4.5px;
+            padding: 6px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border-top: 2px solid var(--primary-blue);
+        }
+
+        .stat-card.correct {
+            border-top-color: var(--accent-green);
+        }
+
+        .stat-card.incorrect {
+            border-top-color: var(--accent-red);
+        }
+
+        .stat-card.unanswered {
+            border-top-color: var(--accent-orange);
+        }
+
+        .stat-value {
+            font-size: 0.9rem;
+            font-weight: 800;
+            margin-bottom: 1.5px;
+        }
+
+        .stat-label {
+            font-size: 0.4875rem;
+            font-weight: 600;
+            color: #6b7280;
+        }
+
+        .performance-meter {
+            width: 100%;
+            height: 6px;
+            background: #e5e7eb;
+            border-radius: 3px;
+            overflow: hidden;
+            margin: 6px 0;
+        }
+
+        .performance-fill {
+            height: 100%;
+            border-radius: 3px;
+            transition: width 0.4s ease;
+            background: var(--gradient-vibrant);
+        }
+
+        @media (max-width: 768px) {
+            .quiz-header {
+                flex-direction: column;
+                gap: 4.5px;
+                align-items: flex-start;
+            }
+            
+            .navigation-buttons {
+                grid-template-columns: 1fr;
+            }
+            
+            .timer-container {
+                position: relative;
+                top: auto;
+                right: auto;
+                margin-top: 3.75px;
+                justify-content: flex-end;
+                width: 100%;
+            }
+            
+            .quiz-title-container {
+                width: 100%;
+            }
+            
+            .result-actions {
+                flex-direction: column;
+            }
+            
+            .promo-banner {
+                padding: 9px;
+            }
+            
+            .promo-banner h2 {
+                font-size: 0.6rem;
+            }
+            
+            .promo-banner p {
+                font-size: 0.4125rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-notification" id="quiz-notification">
+        <div class="quiz-notification-content">
+            <div class="quiz-notification-title" id="notification-title">Quiz Progress Found</div>
+            <div class="quiz-notification-message" id="notification-message">You have an unfinished quiz. Do you want to continue where you left off?</div>
+            <div class="quiz-notification-actions">
+                <button class="quiz-notification-btn secondary" id="notification-no">Start Fresh</button>
+                <button class="quiz-notification-btn primary" id="notification-yes">Continue</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="logo">
+            <h1>WHITE COAT WARRIORS</h1>
+            <p>Excellence in Educational Assessment</p>
+        </div>
+
+        <div id="signin-page" class="page active">
+            <div class="promo-banner">
+                <h2><i class="fas fa-graduation-cap"></i> Unlock Your Potential with WHITE COAT WARRIORS</h2>
+                <p>Boost your preparation with WHITE COAT WARRIORS's realistic online tests, crafted by experts to mirror the actual exam's pattern and challenge. Experience instant feedback, detailed analysis, and flexible online access – your pathway to confidence and success!</p>
+            </div>
+            
+            <h2><i class="fas fa-lock"></i> Access Test</h2>
+            <p>Sign in or use your access code</p>
+            
+            <div class="main-page-buttons">
+                <button class="btn btn-primary" onclick="showQuizAccessForm()">
+                    <i class="fas fa-key"></i>
+                    <span>Sign In with Quiz Access Code</span>
+                </button>
+                <button class="btn btn-primary" onclick="showRegistrationPage()">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Sign Up to Get Quiz Access</span>
+                </button>
+                <button class="btn btn-purple" onclick="showDeveloperAccessForm()">
+                    <i class="fas fa-code"></i>
+                    <span>Developer Access</span>
+                </button>
+            </div>
+            
+            <div id="developer-access-form" class="quiz-access-section">
+                <h3><i class="fas fa-user-secret"></i> Developer Login</h3>
+                <div class="password-container input-container">
+                    <input type="password" id="developerPassword" class="form-input" placeholder="Enter the Developer Password">
+                    <i class="fas fa-eye-slash input-icon" id="toggleDeveloperPassword"></i>
+                </div>
+                <button class="btn btn-purple" onclick="checkDeveloperPassword()">
+                    <span>Log In</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <div id="dev-error-box" class="error-box">
+                    <i class="fas fa-exclamation-circle"></i> Invalid developer password.
+                </div>
+            </div>
+            
+            <div id="quiz-access-form" class="quiz-access-section">
+                <h3><i class="fas fa-key"></i> Enter Quiz Access Code</h3>
+                <div class="password-container input-container">
+                    <input type="password" id="quizAccessCode" class="form-input" placeholder="Enter your 12-Digit Quiz Access Code here">
+                    <i class="fas fa-eye-slash input-icon" id="toggleQuizAccessCode"></i>
+                </div>
+                <button class="btn btn-primary" onclick="accessQuiz(document.getElementById('quizAccessCode').value)">
+                    <span>Access Quiz</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                <div id="quiz-error-box" class="error-box">
+                    <i class="fas fa-exclamation-circle"></i> Invalid quiz access code.
+                </div>
+            </div>
+            
+        </div>
+
+        <div id="registration-page" class="page">
+            <div class="promo-banner">
+                <h2><i class="fas fa-graduation-cap"></i> Unlock Your Potential with WHITE COAT WARRIORS</h2>
+                <p>Boost your preparation with WHITE COAT WARRIORS's realistic online tests, crafted by experts to mirror the actual exam's pattern and challenge. Experience instant feedback, detailed analysis, and flexible online access – your pathway to confidence and success!</p>
+            </div>
+            
+            <h2><i class="fas fa-user-edit"></i> Student Registration</h2>
+            <p>Please provide your details to register</p>
+            
+            <div class="form-group">
+                <label class="form-label"><i class="fas fa-user"></i> Student Name</label>
+                <input type="text" id="studentName" class="form-input" placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+                <label class="form-label"><i class="fas fa-user-friends"></i> Father Name</label>
+                <input type="text" id="fatherName" class="form-input" placeholder="Enter your father's name">
+            </div>
+            <div class="form-group">
+                <label class="form-label"><i class="fas fa-envelope"></i> Email Address</label>
+                <input type="email" id="email" class="form-input" placeholder="Enter your email address">
+            </div>
+            <div class="form-group">
+                <label class="form-label"><i class="fas fa-phone"></i> Mobile Number (WhatsApp)</label>
+                <input type="tel" id="mobile" class="form-input" placeholder="+92XXXXXXXXXX">
+            </div>
+            <div class="form-group">
+                <label class="form-label"><i class="fas fa-city"></i> City / District</label>
+                <input type="text" id="city" class="form-input" placeholder="Enter your city/district">
+            </div>
+            <button class="btn btn-primary" onclick="handleRegistration()">
+                <span>Submit to Get Access to Quiz</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+            <button class="btn btn-red" style="margin-top: 3.75px;" onclick="showPage('signin-page')">
+                <i class="fas fa-chevron-left"></i> Back to Home
+            </button>
+        </div>
+
+        <div id="quiz-page" class="page">
+            <div class="promo-banner">
+                <h2><i class="fas fa-graduation-cap"></i> Unlock Your Potential with WHITE COAT WARRIORS</h2>
+                <p>Boost your preparation with WHITE COAT WARRIORS's realistic online tests, crafted by experts to mirror the actual exam's pattern and challenge. Experience instant feedback, detailed analysis, and flexible online access – your pathway to confidence and success!</p>
+            </div>
+
+            <div class="quiz-header">
+                <div class="quiz-title-container">
+                    <h2 id="quiz-title"></h2>
+                    <div class="quiz-info">
+                        <span><i class="fas fa-book"></i> Subject: <span id="quiz-subject">English Grammar</span></span>
+                        <span><i class="fas fa-clock"></i> Per MCQ: <span id="per-mcq-time">1</span> Minute</span>
+                    </div>
+                </div>
+            </div>
+            <div class="timer-container">
+                <div class="timer" id="question-timer">60</div>
+                <div class="timer total-timer" id="timer">40:00</div>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar" id="quiz-progress"></div>
+            </div>
+
+            <div class="question-nav" id="question-nav"></div>
+            
+            <div class="question-container">
+                <div class="question-text" id="question-text"></div>
+                <div class="options-container" id="options-container"></div>
+                <div class="reasoning" id="reasoning">
+                    <div class="reasoning-title"><i class="fas fa-lightbulb"></i> Explanation:</div>
+                    <div id="reasoning-text"></div>
+                </div>
+            </div>
+            
+            <div class="navigation-buttons">
+                <button class="nav-btn btn-back" onclick="navigateQuestion('prev')">
+                    <i class="fas fa-arrow-left"></i> Back
+                </button>
+                <button class="nav-btn btn-next" onclick="navigateQuestion('next')">
+                    Next <i class="fas fa-arrow-right"></i>
+                </button>
+                <button class="nav-btn btn-reasoning disabled" id="reasoning-btn" onclick="toggleReasoning()">
+                    <i class="fas fa-lightbulb"></i> Reasoning
+                </button>
+                <button class="nav-btn btn-submit" onclick="submitTest()">
+                    Submit <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="results-page" class="page">
+            <div class="results-header-buttons">
+                <a id="website-link" href="#" target="_blank" class="btn btn-primary"><i class="fas fa-globe"></i> Website</a>
+                <a id="whatsapp-contact-link" href="#" target="_blank" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Whatsapp Contact</a>
+                <a id="whatsapp-community-link" href="#" target="_blank" class="btn btn-whatsapp"><i class="fas fa-users"></i> Whatsapp Community</a>
+            </div>
+            
+            <div class="quick-stats">
+                <div class="stat-card correct">
+                    <div class="stat-value" id="correct-count">0</div>
+                    <div class="stat-label">Correct</div>
+                </div>
+                <div class="stat-card incorrect">
+                    <div class="stat-value" id="incorrect-count">0</div>
+                    <div class="stat-label">Incorrect</div>
+                </div>
+                <div class="stat-card unanswered">
+                    <div class="stat-value" id="unanswered-count">0</div>
+                    <div class="stat-label">Unanswered</div>
+                </div>
+            </div>
+            
+            <div class="performance-meter">
+                <div class="performance-fill" id="performance-fill"></div>
+            </div>
+            
+            <div class="result-card">
+                <h2><i class="fas fa-user-graduate"></i> Student Information</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Detail</th>
+                        </tr>
+                    </thead>
+                    <tbody id="student-info-table"></tbody>
+                </table>
+            </div>
+
+            <div class="result-card">
+                <h2><i class="fas fa-chart-bar"></i> Test Results</h2>
+                <table>
+                    <tbody id="quiz-results-table"></tbody>
+                </table>
+            </div>
+            
+            <div class="result-actions">
+                <button class="btn btn-primary" onclick="restartTest()">
+                    <i class="fas fa-redo"></i> Retake Full Test
+                </button>
+                <button class="btn btn-primary" onclick="retakeIncorrect()">
+                    <i class="fas fa-bolt"></i> Retake Incorrect Questions
+                </button>
+                <button class="btn btn-primary" onclick="viewAllMcqs()">
+                    <i class="fas fa-clipboard-list"></i> View All MCQs
+                </button>
+            </div>
+        </div>
+
+        <div id="all-mcqs-page" class="page">
+            <h2><i class="fas fa-list-alt"></i> All MCQs and Solutions</h2>
+            <div class="all-mcqs-list" id="all-mcqs-list"></div>
+            <button class="btn btn-primary" onclick="showPage('results-page')">
+                <i class="fas fa-arrow-left"></i> Back to Results
+            </button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html><script>// ***************************************************************
+// !! IMPORTANT: GOOGLE APPS SCRIPT URL FOR DATA LOGGING !!
+const SHEET_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxH08_vQhw7nqJCy3igwm70zXI2Mwau8CvcIeXdZMF2dFm9bPfgWtP6En4GQZGKte7c/exec';
+// ***************************************************************
+
+// Quiz Data
+const quizData_WCW_RES_001 = [
+    {
+        question: "What is the primary purpose of respiration in an organism?",
+        options: [
+            "To synthesize complex organic compounds",
+            "To release energy for body activities",
+            "To store carbon dioxide in tissues",
+            "To produce water as a byproduct"
+        ],
+        correctAnswer: 1,
+        reasoning: "The text states: 'Purpose: To make food energy available for body activities.'"
+    },
+    {
+        question: "Which part of the upper respiratory tract is shared by both the digestive and respiratory systems?",
+        options: [
+            "Nasal cavity",
+            "Larynx",
+            "Pharynx",
+            "Trachea"
+        ],
+        correctAnswer: 2,
+        reasoning: "The text identifies the Pharynx (Throat) as 'Part of both digestive and respiratory systems'."
+    },
+    {
+        question: "What prevents the trachea from collapsing?",
+        options: [
+            "Elastic fibers in its wall",
+            "15-20 C-shaped pieces of hyaline cartilage",
+            "Continuous muscle contraction",
+            "Internal air pressure"
+        ],
+        correctAnswer: 1,
+        reasoning: "The text states the trachea is 'Reinforced by 15-20 C-shaped pieces of hyaline cartilage to prevent collapse'."
+    },
+    {
+        question: "Which substance lowers surface tension in the alveoli and prevents their collapse?",
+        options: [
+            "Collagen",
+            "Elastin",
+            "Surfactant",
+            "Mucus"
+        ],
+        correctAnswer: 2,
+        reasoning: "The text notes: 'Surfactant: A lipoprotein ... Lowers surface tension, prevents alveolar collapse'."
+    },
+    {
+        question: "What is the approximate volume of air exchanged during one quiet breath, known as Tidal Volume (TV)?",
+        options: [
+            "1200 ml",
+            "500 ml",
+            "3000 ml",
+            "1.5 liters"
+        ],
+        correctAnswer: 1,
+        reasoning: "The text defines 'Tidal Volume (TV): Volume of air exchanged during one quiet breath (~500 ml)'."
+    },
+    {
+        question: "Where is the primary involuntary breathing center located in the brain?",
+        options: [
+            "Pons",
+            "Cerebral hemispheres",
+            "Medulla oblongata",
+            "Limbic system"
+        ],
+        correctAnswer: 2,
+        reasoning: "The text states: 'Involuntary Control: Primarily managed by a breathing center in the medulla oblongata'."
+    },
+    {
+        question: "How is the majority of oxygen transported in the blood?",
+        options: [
+            "Dissolved in plasma",
+            "As bicarbonate ions",
+            "Bound to haemoglobin",
+            "As carbaminohaemoglobin"
+        ],
+        correctAnswer: 2,
+        reasoning: "The text specifies: 'Approximately 97% of oxygen is carried by red blood cells bound to haemoglobin'."
+    },
+    {
+        question: "What is the primary function of myoglobin in skeletal muscles?",
+        options: [
+            "To transport CO2",
+            "To store oxygen",
+            "To produce ATP",
+            "To increase blood flow"
+        ],
+        correctAnswer: 1,
+        reasoning: "The text describes myoglobin's function as: 'Stores oxygen in resting muscle'."
+    },
+    {
+        question: "Which respiratory protective mechanism involves small hair-like structures that move trapped substances to the pharynx?",
+        options: [
+            "Nostril hairs",
+            "Mucous lining",
+            "Cilia",
+            "Epiglottis"
+        ],
+        correctAnswer: 2,
+        reasoning: "The text mentions: '...cilia (mucous elevator) remove foreign particles.'"
+    },
+    {
+        question: "Which condition results from spasmodic contraction of the diaphragm with a closed glottis?",
+        options: [
+            "Sneezing",
+            "Snoring",
+            "Hiccups",
+            "Yawning"
+        ],
+        correctAnswer: 2,
+        reasoning: "The text defines 'Hiccups: Spasmodic contraction of the diaphragm with a closed glottis, producing a sharp sound'."
+    },
+    {
+        question: "The process at the cellular level involving the breakdown of complex organic compounds into simpler molecules with energy release is termed:",
+        options: [
+            "External respiration",
+            "Ventilation",
+            "Internal respiration",
+            "Gas exchange"
+        ],
+        correctAnswer: 2,
+        reasoning: "The text states: 'Internal Respiration (Cellular Level): A catabolic process involving the breakdown of complex organic compounds into simpler molecules with the release of energy. Occurs at the cellular level.'"
+    },
+    {
+        question: "For efficient gas diffusion, the respiratory surface must primarily facilitate passage of gases by being:",
+        options: [
+            "Highly vascularized",
+            "Moist and permeable",
+            "Greatly ventilated",
+            "Thick and robust"
+        ],
+        correctAnswer: 1,
+        reasoning: "The text explicitly lists: 'For effective gas diffusion, the respiratory surface must be: Moist and permeable: Gases can pass through easily.'"
+    },
+    {
+        question: "The anterior parts of the nasal cavities, known as vestibules, contain structures specifically for:",
+        options: [
+            "Detecting smells",
+            "Filtering large particulate matter",
+            "Warming incoming air",
+            "Humidifying dry air"
+        ],
+        correctAnswer: 1,
+        reasoning: "The text states: 'Vestibules: Anterior parts near nostrils, contain hairs. Functions: Filtration: Hairs... trap harmful pathogens, dust, and particulate matter.'"
+    },
+    {
+        question: "The pharynx is functionally divided into three parts; the one responsible for conditioning inspired air is the:",
+        options: [
+            "Oropharynx",
+            "Laryngopharynx",
+            "Nasopharynx",
+            "Hypopharynx"
+        ],
+        correctAnswer: 2,
+        reasoning: "The text specifies: 'Nasopharynx: From skull base to soft palate, conditions inspired air.'"
+    },
+    {
+        question: "What is the primary role of the epiglottis during swallowing?",
+        options: [
+            "To vibrate and produce sound",
+            "To open the glottis wider",
+            "To prevent food and liquid from entering the larynx",
+            "To regulate airflow to the bronchi"
+        ],
+        correctAnswer: 2,
+        reasoning: "The text explains: 'Epiglottis: ...presses down during swallowing to prevent food/liquid entry.'"
+    },
+    {
+        question: "The vocal cords, described as two pairs of horizontal folds with elastic fibers, produce sound when:",
+        options: [
+            "Air is forced past them causing vibration",
+            "They relax to allow air to pass silently",
+            "They contract rhythmically",
+            "Food passes over them"
+        ],
+        correctAnswer: 0,
+        reasoning: "The text describes: 'Vocal Cords: ...vibrate to produce sound when air is forced past them.'"
+    },
+    {
+        question: "Bronchioles are distinguished from primary, secondary, and tertiary bronchi by their lack of:",
+        options: [
+            "Ciliated lining",
+            "Mucus secretion",
+            "Cartilage",
+            "Smooth muscle"
+        ],
+        correctAnswer: 2,
+        reasoning: "The text differentiates: 'Bronchioles: Further branching, <1mm diameter, no cartilage.'"
+    },
+    {
+        question: "The tiny air-filled chambers where O2 and CO2 exchange between air and blood occurs are called:",
+        options: [
+            "Terminal bronchioles",
+            "Alveolar ducts",
+            "Bronchi",
+            "Alveoli"
+        ],
+        correctAnswer: 3,
+        reasoning: "The text defines 'Alveoli: Tiny air-filled chambers... Site of Gas Exchange: Where O2 and CO2 exchange between air and blood occurs.'"
+    },
+    {
+        question: "The area between the lungs containing the heart is referred to as the:",
+        options: [
+            "Hilum",
+            "Pleural cavity",
+            "Mediastinum",
+            "Diaphragm"
+        ],
+        correctAnswer: 2,
+        reasoning: "The text specifies: 'Mediastinum: Area between the lungs containing the heart.'"
+    },
+    {
+        question: "During the active phase of inspiration, the diaphragm's action involves:",
+        options: [
+            "Relaxing and moving upward",
+            "Contracting and moving downward",
+            "Contracting and moving sideways",
+            "Relaxing and remaining stationary"
+        ],
+        correctAnswer: 1,
+        reasoning: "The text states for Inspiration: 'Diaphragm contracts and flattens (moves downward).'"
+    },
+    {
+        question: "In normal expiration, which muscular action is described as the internal intercostals contracting while external intercostals relax?",
+        options: [
+            "Pulling the rib cage upward and forward",
+            "Flattening the diaphragm",
+            "Pulling the rib cage downward and backward",
+            "Increasing thoracic cavity volume"
+        ],
+        correctAnswer: 2,
+        reasoning: "The text states for Expiration: '...internal intercostals contract, pulling rib cage downward and backward.'"
+    },
+    {
+        question: "The volume of air remaining in the lungs even after a forcible expiration is termed:",
+        options: [
+            "Tidal Volume",
+            "Inspiratory Reserve Volume",
+            "Expiratory Reserve Volume",
+            "Residual Volume"
+        ],
+        correctAnswer: 3,
+        reasoning: "The text defines 'Residual Volume (RV): Air remaining in the lungs even after a forcible expiration (~1.5 liters).'"
+    },
+    {
+        question: "The inspiratory center, located in the ventral medulla, primarily serves to:",
+        options: [
+            "Inhibit inspiration",
+            "Stimulate forceful expiration",
+            "Control inspiration, increasing its rate and depth",
+            "Regulate the pH of blood"
+        ],
+        correctAnswer: 2,
+        reasoning: "The text describes: 'Inspiratory Center (Ventral Medulla): Controls inspiration, increasing its rate and depth. Primary respiratory center.'"
+    },
+    {
+        question: "Nerve connections from the breathing center communicate with the diaphragm via which specific nerves?",
+        options: [
+            "Intercostal nerves",
+            "Vagus nerves",
+            "Phrenic nerves",
+            "Cranial nerves"
+        ],
+        correctAnswer: 2,
+        reasoning: "The text states: 'Nerve Connections: Breathing center ... with the diaphragm via phrenic nerves.'"
+    },
+    {
+        question: "The approximate percentage of oxygen transported dissolved in blood plasma is:",
+        options: [
+            "97%",
+            "70%",
+            "23%",
+            "3%"
+        ],
+        correctAnswer: 3,
+        reasoning: "The text specifies: 'Dissolved in Plasma: Approximately 3% of oxygen is transported dissolved in the plasma.'"
+    },
+    {
+        question: "Carbonic anhydrase is an enzyme crucial for the formation of carbonic acid from:",
+        options: [
+            "Oxygen and water",
+            "Carbon dioxide and hydrogen ions",
+            "Carbon dioxide and water",
+            "Bicarbonate ions and hydrogen ions"
+        ],
+        correctAnswer: 2,
+        reasoning: "The text explains: 'CO2 diffuses... combines with water (H2O) to form carbonic acid (H2CO3) via carbonic anhydrase enzyme.'"
+    },
+    {
+        question: "The phenomenon where chloride ions diffuse from plasma into RBCs to maintain ionic balance during CO2 transport is known as:",
+        options: [
+            "Bohr effect",
+            "Haldane effect",
+            "Chloride Shift",
+            "Oxygen-haemoglobin dissociation"
+        ],
+        correctAnswer: 2,
+        reasoning: "The text describes: 'Chloride Shift (Hamburger's Phenomenon): HCO3- diffuses out of RBCs into plasma. Chloride ions (Cl-) diffuse from plasma into RBCs to maintain ionic balance.'"
+    },
+    {
+        question: "Haemoglobin is characterized by being composed of four polypeptide chains, each containing:",
+        options: [
+            "A single oxygen molecule",
+            "An iron-containing haem group",
+            "A globin portion only",
+            "A phosphate group"
+        ],
+        correctAnswer: 1,
+        reasoning: "The text states: 'Haemoglobin: Composed of four polypeptide chains (globin). Each chain has an iron-containing haem group.'"
+    },
+    {
+        question: "A significant difference in oxygen affinity exists between haemoglobin and myoglobin, with myoglobin releasing oxygen only when PO2 is:",
+        options: [
+            "Around 100 mmHg",
+            "Higher than 60 mmHg",
+            "Less than 20 mmHg",
+            "Similar to tissue PO2"
+        ],
+        correctAnswer: 2,
+        reasoning: "The text notes: 'Myoglobin: ...Higher affinity than haemoglobin (releases O2 when PO2 < 20 mmHg).'"
+    },
+    {
+        question: "One major effect of smoking on the respiratory system is the permanent damage to:",
+        options: [
+            "Nasal cartilages",
+            "Alveoli",
+            "Bronchial cartilage plates",
+            "Phrenic nerves"
+        ],
+        correctAnswer: 1,
+        reasoning: "The text explicitly states smoking 'Leads to permanent damage to air sacs (alveoli).'"
+    },
+    {
+        question: "If a patient experiences a severe reduction in the secretion of surfactant within their alveoli, what is the most likely immediate physiological consequence?",
+        options: [
+            "Enhanced gas exchange efficiency due to drier surfaces.",
+            "Increased resistance to airflow in the bronchioles.",
+            "Alveolar collapse, making breathing difficult.",
+            "Rapid bacterial growth within the lungs."
+        ],
+        correctAnswer: 2,
+        reasoning: "The text states that surfactant 'lowers surface tension, prevents alveolar collapse'. A reduction would therefore lead to collapse."
+    },
+    {
+        question: "A person holds their breath for an extended period. Which part of their brain would eventually override the voluntary control to initiate breathing, primarily due to rising CO2 levels?",
+        options: [
+            "Cerebral hemispheres",
+            "Pons",
+            "Limbic system",
+            "Medulla oblongata"
+        ],
+        correctAnswer: 3,
+        reasoning: "The text mentions voluntary control from cerebral hemispheres but also involuntary control by the 'breathing center in the medulla oblongata'. The buffering of H+ ions (from CO2) to 'prevent pH drop' indicates the medulla's sensitivity to CO2/pH, which would eventually override voluntary breath-holding."
+    },
+    {
+        question: "Consider a scenario where an individual suffers a spinal cord injury that severs the phrenic nerves. What would be the direct and severe consequence on their breathing mechanism?",
+        options: [
+            "Inability to control external intercostal muscles.",
+            "Complete paralysis of the diaphragm, severely impairing inspiration.",
+            "Impaired vocal cord function.",
+            "Reduced ability to filter inspired air."
+        ],
+        correctAnswer: 1,
+        reasoning: "The text states: 'Breathing center communicates... with the diaphragm via phrenic nerves.' Severing these nerves would directly paralyze the diaphragm, which is crucial for inspiration."
+    },
+    {
+        question: "During vigorous exercise, tissues generate more CO2 and heat, and become more acidic. How would these changes collectively influence oxygen delivery from haemoglobin to the working muscles?",
+        options: [
+            "Increase oxygen affinity, reducing release.",
+            "Decrease oxygen affinity, enhancing release.",
+            "Have no significant effect on oxygen release.",
+            "Convert oxyhaemoglobin to carbaminohaemoglobin."
+        ],
+        correctAnswer: 1,
+        reasoning: "The text states that oxygen binding to haemoglobin is 'influenced by partial pressure of O2, temperature, pH, and PCO2.' Higher temperature, lower pH (more acidic), and higher PCO2 (due to more CO2) all decrease haemoglobin's affinity for O2, promoting its release to tissues."
+    },
+    {
+        question: "A diver experiences 'the bends' (decompression sickness) due to dissolved gases forming bubbles in tissues upon rapid ascent. Which feature of SCUBA apparatus is specifically designed to manage the gas mixture for safer deep dives than regular air?",
+        options: [
+            "Compressed air tank capacity",
+            "The regulator for consistent pressure",
+            "Nitrox usage with altered O2/N2 ratio",
+            "The mask's sealing ability"
+        ],
+        correctAnswer: 2,
+        reasoning: "The text mentions 'SCUBA (Self-Contained Underwater Breathing Apparatus): Aqualung containing compressed air or Nitrox (e.g., 35% O2, 65% N2) for diving.' Nitrox specifically modifies the N2 content, which is the primary gas implicated in 'the bends'."
+    },
+    {
+        question: "An individual is diagnosed with a condition that causes their bronchial tree to lose its cartilage plates progressively. What would be the most immediate anatomical consequence as a result?",
+        options: [
+            "The trachea would collapse easily.",
+            "The primary, secondary, and tertiary bronchi would lose structural support.",
+            "The smaller bronchioles would become non-functional.",
+            "Gas exchange in the alveoli would cease."
+        ],
+        correctAnswer: 1,
+        reasoning: "The text states: 'Secondary Bronchi: ...Contain cartilage plates.' and 'Tertiary Bronchi: Secondary bronchi divide into tertiary.' Bronchioles are specifically noted as having 'no cartilage'. Therefore, losing cartilage plates would affect the bronchi, not the trachea (which has C-shaped rings) or bronchioles."
+    },
+    {
+        question: "A substance inhaled into the respiratory tract paralyzes the cilia lining the airways. What is a direct physiological outcome of this paralysis?",
+        options: [
+            "Increased moisture in the inhaled air.",
+            "Impaired warming of incoming air.",
+            "Reduced filtration of particulate matter reaching the pharynx.",
+            "Enhanced vocalization due to smoother airways."
+        ],
+        correctAnswer: 2,
+        reasoning: "The text states that 'mucus and cilia move trapped substances to the pharynx for removal'. Paralysis of cilia would hinder this 'defense' mechanism, leading to reduced removal of particulate matter."
+    },
+    {
+        question: "If a significant decrease (e.g., 20%) in ambient oxygen concentration occurs, what specific change in respiratory control is explicitly described by the text?",
+        options: [
+            "Voluntary control takes over completely.",
+            "The breathing rate doubles.",
+            "The inspiratory center becomes inactive.",
+            "The expiratory center takes primary control."
+        ],
+        correctAnswer: 1,
+        reasoning: "The text states: 'Oxygen Concentration: Normally minor effect, but a significant drop (e.g., 20% decrease) can double breathing rate.'"
+    },
+    {
+        question: "In tissues, carbon dioxide combines with water inside red blood cells to form carbonic acid. What happens to the hydrogen ions produced from the dissociation of carbonic acid?",
+        options: [
+            "They are immediately transported out of the RBCs into the plasma.",
+            "They are buffered by haemoglobin, simultaneously facilitating O2 release.",
+            "They combine with bicarbonate ions to re-form carbonic acid.",
+            "They are directly converted into carbaminohaemoglobin."
+        ],
+        correctAnswer: 1,
+        reasoning: "The text states: 'H2CO3 dissociates into hydrogen ions (H+) and bicarbonate ions (HCO3-). Buffering: H+ ions are buffered by haemoglobin (forming HHb) to prevent pH drop, simultaneously releasing O2 to tissues.'"
+    },
+    {
+        question: "Bird respiration is noted for its efficiency at high altitudes. Which specific characteristic described contributes significantly to this advantage, beyond high-affinity haemoglobin?",
+        options: [
+            "The presence of a larger residual volume.",
+            "A reliance solely on cutaneous respiration.",
+            "A one-way air flow through the lungs.",
+            "Reduced number of capillaries around air sacs."
+        ],
+        correctAnswer: 2,
+        reasoning: "The text lists: 'Bird Respiration: Highly efficient due to high-affinity haemoglobin, many capillaries, one-way air flow (no residual volume), and large air sacs.' One-way air flow is a distinct factor."
+    },
+    {
+        question: "The inner lining of the nasal cavities is described as having mucous membranes and cilia. How does this combined structural arrangement contribute to the defense function beyond simple trapping?",
+        options: [
+            "Cilia primarily sense chemical changes in the air, triggering immune responses.",
+            "Mucus provides an antimicrobial barrier, while cilia actively transport trapped pathogens towards the digestive system.",
+            "The membranes actively absorb harmful gases, and cilia ensure uniform distribution across the surface.",
+            "Both mucus and cilia work in tandem to warm the air more efficiently before it reaches the lungs."
+        ],
+        correctAnswer: 1,
+        reasoning: "The text states: 'Lined by mucous membranes and cilia.' and 'Functions: Filtration: Hairs, mucus, and cilia trap harmful pathogens... Defense: Mucus and cilia move trapped substances to the pharynx for removal.' This implies active removal of trapped substances, which are then typically swallowed."
+    },
+    {
+        question: "Consider the detailed mechanism of CO2 transport. The 'Chloride Shift' is a crucial event. If the transport of bicarbonate ions out of the RBCs were suddenly inhibited, what would be the most profound and immediate consequence on blood pH in the tissues?",
+        options: [
+            "pH would increase significantly due to reduced H+ production.",
+            "pH would decrease significantly due to accumulated H+ inside RBCs.",
+            "pH would remain stable as other buffer systems compensate completely.",
+            "pH would decrease slightly, but only in the plasma, not in RBCs."
+        ],
+        correctAnswer: 1,
+        reasoning: "The text describes: 'H2CO3 dissociates into hydrogen ions (H+) and bicarbonate ions (HCO3-). Buffering: H+ ions are buffered by haemoglobin (forming HHb) to prevent pH drop...' If HCO3- cannot leave the RBC, the accumulation of H+ inside would overwhelm the buffering capacity of haemoglobin, leading to a significant drop in intracellular pH, which would then impact overall blood pH."
+    },
+    {
+        question: "The text states that oxygen concentration normally has a minor effect on breathing control, but a significant drop can double the breathing rate. Conversely, the mechanism of CO2 transport explicitly details the buffering of H+ ions by haemoglobin to 'prevent pH drop.' Based on this, which gas's concentration change is the more potent and continuous regulator of baseline breathing rate in normal physiological conditions?",
+        options: [
+            "Oxygen, as it directly binds to haemoglobin.",
+            "Carbon dioxide, primarily through its influence on blood pH.",
+            "Both gases contribute equally as chemoreceptors are sensitive to both.",
+            "Neither, as voluntary control predominates."
+        ],
+        correctAnswer: 1,
+        reasoning: "The text describes O2 having a 'minor effect' normally, while the detailed mechanism for CO2 transport heavily involves buffering H+ to 'prevent pH drop'. This implies that maintaining pH (and thus regulating CO2 levels) is a more crucial and continuous physiological drive for breathing control than minor fluctuations in O2."
+    },
+    {
+        question: "Alveoli are described as being lined with moist squamous epithelium and surrounded by a dense network of blood capillaries, with walls 0.1 µm thick. Which combination of these features is most critical for maximizing the *rate* of gas exchange?",
+        options: [
+            "Moisture and squamous epithelium, primarily reducing friction.",
+            "Dense capillary network and squamous epithelium, ensuring structural integrity.",
+            "Thinness and dense capillary network, creating a short diffusion path and maintaining a steep gradient.",
+            "Squamous epithelium and moist lining, preventing alveolar collapse."
+        ],
+        correctAnswer: 2,
+        reasoning: "The text lists 'Thin: Diffusion is efficient over distances of 1 mm or less (e.g., 0.1 µm for alveoli)' and 'Good blood supply: Facilitates transport of gases. Good ventilation mechanism: Maintains a steep diffusion gradient.' The combination of a thin wall (short diffusion path) and a dense capillary network (maintaining a steep gradient by removing/delivering gases) is crucial for a high rate of diffusion."
+    },
+    {
+        question: "Carbon monoxide (CO) poisoning is described as CO binding to haemoglobin with 249 times greater affinity than O2, preventing O2 transport and release. Considering the physiological consequences, why would this high affinity be significantly more dangerous than, for example, a substance that merely competed equally with O2 for binding sites?",
+        options: [
+            "It prevents CO2 transport more effectively, leading to acidosis.",
+            "It irreversibly binds to haemoglobin, permanently deactivating it.",
+            "Even in low concentrations, CO effectively monopolizes haemoglobin, leading to severe oxygen deprivation despite ample environmental O2.",
+            "It directly damages red blood cells, reducing their oxygen-carrying capacity."
+        ],
+        correctAnswer: 2,
+        reasoning: "The '249 times greater affinity' means CO will preferentially bind to haemoglobin even when O2 is abundant and CO is present in very low concentrations, thereby blocking O2 binding and transport more effectively than a mere competitive binder with equal affinity."
+    },
+    {
+        question: "The 'Oxygen-Haemoglobin Dissociation Curve' illustrates the relationship between partial pressure of O2 and haemoglobin saturation, where higher PO2 leads to higher saturation. Given that ~5 ml O2 is released to tissues per 100 ml blood, what does this curve fundamentally imply about haemoglobin's efficiency in oxygen delivery?",
+        options: [
+            "Haemoglobin maintains maximum saturation even at very low tissue PO2.",
+            "Haemoglobin releases its entire oxygen load instantaneously upon reaching tissues.",
+            "Haemoglobin's affinity for oxygen is finely tuned to release oxygen progressively as tissue oxygen demand increases (PO2 decreases).",
+            "Oxygen release is primarily dictated by the total volume of blood flow, not PO2."
+        ],
+        correctAnswer: 2,
+        reasoning: "The curve shows a variable relationship, not an all-or-nothing release. The fact that '~5 ml O2 is released' (not all 20 ml O2 capacity) indicates a progressive and regulated release tailored to local tissue needs, where lower PO2 drives more release."
+    },
+    {
+        question: "If a person consciously holds their breath, which physiological mechanism would most likely act as the ultimate involuntary trigger to resume breathing, even against conscious effort?",
+        options: [
+            "Extreme drop in blood oxygen concentration.",
+            "Accumulation of CO2, leading to a drop in blood pH sensed by the medulla.",
+            "Direct neural fatigue of the inspiratory muscles.",
+            "Activation of the limbic system due to emotional stress."
+        ],
+        correctAnswer: 1,
+        reasoning: "The text states 'Oxygen Concentration: Normally minor effect' on breathing rate. However, the comprehensive CO2 transport mechanism involving the formation of H+ ions and subsequent buffering to 'prevent pH drop' highlights the body's strong sensitivity to CO2/pH changes, making it the primary and ultimate trigger for respiratory drive, overriding voluntary control."
+    },
+    {
+        question: "Consider bird respiration, characterized by one-way air flow and no residual volume. How does the absence of residual volume specifically contribute to their highly efficient gas exchange compared to human lungs?",
+        options: [
+            "It reduces the total lung capacity, making them lighter for flight.",
+            "It ensures that fresh, oxygen-rich air is continuously available for exchange without mixing with stale air.",
+            "It increases the mechanical work required for inspiration.",
+            "It allows for greater diffusion distances between air and blood."
+        ],
+        correctAnswer: 1,
+        reasoning: "The text highlights 'one-way air flow (no residual volume)' as a factor for bird respiration's 'highly efficient' nature. In humans, residual volume means inhaled fresh air mixes with stale air, diluting the oxygen concentration. The absence of residual volume in birds means a consistently higher oxygen partial pressure available for exchange, maximizing the gradient."
+    },
+    {
+        question: "Myoglobin has a higher affinity for O2 than haemoglobin, releasing O2 when PO2 < 20 mmHg, compared to haemoglobin releasing at ~PO2 60 mmHg. This difference is critical because:",
+        options: [
+            "It allows myoglobin to scavenge oxygen from haemoglobin in the lungs.",
+            "Myoglobin acts as a short-term oxygen storage, only releasing it when muscle tissue is severely oxygen-depleted.",
+            "Haemoglobin needs to release oxygen at higher partial pressures to sustain basic cellular functions in most tissues.",
+            "Myoglobin's lower affinity ensures that muscles get oxygen before other vital organs."
+        ],
+        correctAnswer: 1,
+        reasoning: "The text states myoglobin 'Stores oxygen in resting muscle' and has a 'Higher affinity than haemoglobin (releases O2 when PO2 < 20 mmHg)'. This high affinity and release only at very low PO2 implies it holds onto oxygen until the muscle's oxygen demand is critically high or stores it for later use."
+    },
+    {
+        question: "The transport of carbon dioxide involves 70% as bicarbonate ions, 23% as carbaminohaemoglobin, and 7% dissolved in plasma. Why is the conversion to bicarbonate ions, facilitated by carbonic anhydrase and followed by the chloride shift, considered the most significant and complex mechanism for CO2 transport?",
+        options: [
+            "It directly provides energy for cellular activities.",
+            "It allows for the transport of a large volume of CO2 while simultaneously buffering H+ ions to maintain blood pH.",
+            "It promotes the binding of oxygen to haemoglobin in the tissues.",
+            "It prevents the accumulation of CO2 in the alveoli."
+        ],
+        correctAnswer: 1,
+        reasoning: "The text clearly outlines that 'Approximately 70% of CO2' is transported via this pathway, and crucial 'Buffering: H+ ions are buffered by haemoglobin... to prevent pH drop'. This mechanism handles the majority of CO2 transport and is vital for maintaining blood pH homeostasis, making it the most significant and complex."
+    }
+];
+
+// Constants
+const QUIZ_ACCESS_CODE = "WCW-RES-001";
+const DEV_ACCESS_CODE = "Dev-PDA-001";
+const ACADEMY_NAME = "WHITE COAT WORRIORS";
+const QUIZ_SUBJECT = "Respiration ";
+const WEBSITE_LINK = "https://premiumdoctoracademy.com";
+const WHATSAPP_CONTACT = "03287743851";
+const WHATSAPP_COMMUNITY = "https://whatsapp.com/channel/0029VaFCIU6EquiOlXWcNR1X";
+const TIME_PER_MCQ = 60;
+const MARK_PER_MCQ = 1;
+const NEGATIVE_MARKING = 0;
+
+// Global state variables
+let currentQuizId = 'WCW-RES-001';
+let quizData = quizData_WCW_RES_001;
+let currentQuestion = 0;
+let userAnswers = Array(quizData.length).fill(null);
+let timeLeft;
+let questionTimeLeft;
+let totalTimeInterval;
+let questionTimeInterval;
+let studentData = {};
+let studentAccessCode = "";
+
+// DOM elements
+const questionNavEl = document.getElementById('question-nav');
+const questionTextEl = document.getElementById('question-text');
+const optionsContainerEl = document.getElementById('options-container');
+const reasoningEl = document.getElementById('reasoning');
+const reasoningTextEl = document.getElementById('reasoning-text');
+const quizTitleEl = document.getElementById('quiz-title');
+const quizSubjectEl = document.getElementById('quiz-subject');
+const perMcqTimeEl = document.getElementById('per-mcq-time');
+const totalTimerEl = document.getElementById('timer');
+const questionTimerEl = document.getElementById('question-timer');
+const quizProgressEl = document.getElementById('quiz-progress');
+const studentInfoTable = document.getElementById('student-info-table');
+const quizResultsTable = document.getElementById('quiz-results-table');
+const allMcqsList = document.getElementById('all-mcqs-list');
+const devPasswordInput = document.getElementById('developerPassword');
+const devErrorBox = document.getElementById('dev-error-box');
+const quizAccessCodeInput = document.getElementById('quizAccessCode');
+const quizAccessErrorBox = document.getElementById('quiz-error-box');
+const toggleDevPasswordIcon = document.getElementById('toggleDeveloperPassword');
+const toggleQuizCodeIcon = document.getElementById('toggleQuizAccessCode');
+const websiteLinkEl = document.getElementById('website-link');
+const whatsappContactLinkEl = document.getElementById('whatsapp-contact-link');
+const whatsappCommunityLinkEl = document.getElementById('whatsapp-community-link');
+const reasoningBtn = document.getElementById('reasoning-btn');
+const quizNotificationEl = document.getElementById('quiz-notification');
+const notificationTitleEl = document.getElementById('notification-title');
+const notificationMessageEl = document.getElementById('notification-message');
+const notificationYesBtn = document.getElementById('notification-yes');
+const notificationNoBtn = document.getElementById('notification-no');
+const correctCountEl = document.getElementById('correct-count');
+const incorrectCountEl = document.getElementById('incorrect-count');
+const unansweredCountEl = document.getElementById('unanswered-count');
+const performanceFillEl = document.getElementById('performance-fill');
+
+
+/**
+ * @description Sends data to the Google Apps Script endpoint.
+ * @param {object} data - The payload containing type ('registration' or 'quiz_result') and data.
+ */
+function sendDataToSheet(data) {
+    if (!SHEET_SCRIPT_URL || SHEET_SCRIPT_URL.includes('YOUR_DEPLOYED_WEB_APP_URL')) {
+        console.error('SHEET_SCRIPT_URL is not configured. Data not sent to Google Sheet.');
+        return Promise.resolve({ success: false, message: 'Script URL not configured.' });
+    }
+
+    return fetch(SHEET_SCRIPT_URL, {
+        method: 'POST',
+        // 'no-cors' is necessary for Apps Script to accept cross-origin POST requests from a web page
+        mode: 'no-cors',
+        cache: 'no-cache',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => {
+        // Cannot read response body with 'no-cors', assume request was sent successfully
+        return { success: true, message: 'Request sent to Google Script.' };
+    })
+    .catch(error => {
+        console.error('Sheet Data Send Error:', error);
+        return { success: false, message: 'Failed to send request to Google Script.' };
+    });
+}
+
+
+// Initialization
+document.addEventListener('DOMContentLoaded', () => {
+    const storedStudentData = localStorage.getItem('studentData');
+    if (storedStudentData) {
+        studentData = JSON.parse(storedStudentData);
+        document.getElementById('studentName').value = studentData['Student Name'] || '';
+        document.getElementById('fatherName').value = studentData['Father Name'] || '';
+        document.getElementById('email').value = studentData['Email'] || '';
+        document.getElementById('mobile').value = studentData['Mobile'] || '';
+        document.getElementById('city').value = studentData['City'] || '';
+    }
+    const storedCode = localStorage.getItem('studentAccessCode');
+    if (storedCode) {
+        studentAccessCode = storedCode;
+    }
+    
+    showPage('signin-page');
+    
+    if (toggleDevPasswordIcon) toggleDevPasswordIcon.addEventListener('click', () => togglePasswordVisibility('developerPassword', 'toggleDeveloperPassword'));
+    if (toggleQuizCodeIcon) toggleQuizCodeIcon.addEventListener('click', () => togglePasswordVisibility('quizAccessCode', 'toggleQuizAccessCode'));
+});
+
+function showQuizNotification(title, message, type = 'info') {
+    const allowedNotifications = ['Registration Successful', 'Access Granted', 
+                                 'Quiz Completed!', 'Quiz Reset', 'Registration Error', 'Submission Error', 'Registration Warning'];
+    
+    if (!allowedNotifications.includes(title)) {
+        return;
+    }
+    
+    notificationTitleEl.textContent = title;
+    notificationMessageEl.textContent = message;
+    
+    quizNotificationEl.classList.remove('warning', 'error');
+    
+    if (type === 'warning') {
+        quizNotificationEl.classList.add('warning');
+    } else if (type === 'error') {
+        quizNotificationEl.classList.add('error');
+    }
+    
+    quizNotificationEl.classList.add('show');
+    
+    setTimeout(() => {
+        if (quizNotificationEl.classList.contains('show')) {
+            hideQuizNotification();
+        }
+    }, 5000);
+}
+
+function hideQuizNotification() {
+    quizNotificationEl.classList.remove('show');
+}
+
+function showPage(pageId) {
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(page => page.classList.remove('active'));
+    document.getElementById(pageId).classList.add('active');
+    document.querySelectorAll('.error-box, .success-box').forEach(el => el.style.display = 'none');
+}
+
+function togglePasswordVisibility(inputID, iconID) {
+    const passwordInput = document.getElementById(inputID);
+    const toggleIcon = document.getElementById(iconID);
+    
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        toggleIcon.classList.remove('fa-eye-slash');
+        toggleIcon.classList.add('fa-eye');
+    } else {
+        passwordInput.type = 'password';
+        toggleIcon.classList.remove('fa-eye');
+        toggleIcon.classList.add('fa-eye-slash');
+    }
+}
+
+function showQuizAccessForm() {
+    document.getElementById('quiz-access-form').style.display = 'flex';
+    document.getElementById('developer-access-form').style.display = 'none';
+}
+
+function showDeveloperAccessForm() {
+    document.getElementById('developer-access-form').style.display = 'flex';
+    document.getElementById('quiz-access-form').style.display = 'none';
+}
+
+function showRegistrationPage() {
+    showPage('registration-page');
+}
+
+// Registration Handler
+function generateAccessCode(studentName, fatherName) {
+    const studentInitials = studentName.split(' ').map(n => n[0]).join('').toUpperCase();
+    const fatherInitials = fatherName.split(' ').map(n => n[0]).join('').toUpperCase();
+    const uniqueId = Math.random().toString(36).substring(2, 7).toUpperCase();
+
+    return `${ACADEMY_NAME.replace(/\s+/g, '-')}-${studentInitials}${fatherInitials}-${uniqueId}`;
+}
+
+function handleRegistration() {
+    const sName = document.getElementById('studentName').value.trim();
+    const fName = document.getElementById('fatherName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const mobile = document.getElementById('mobile').value.trim();
+    const city = document.getElementById('city').value.trim();
+    
+    if (!sName || !fName || !email || !mobile || !city) {
+        showQuizNotification('Registration Error', 'Please fill in all the registration details.', 'error');
+        return;
+    }
+    
+    // Generate access code
+    const generatedCode = generateAccessCode(sName, fName);
+    studentAccessCode = generatedCode;
+
+    studentData = {
+        'Student Name': sName,
+        'Father Name': fName,
+        'Email': email,
+        'Mobile': mobile,
+        'City': city
+    };
+
+    // --- NEW: SEND REGISTRATION DATA TO GOOGLE SHEET ---
+    const registrationDataToSend = {
+        type: 'registration',
+        accessCode: generatedCode,
+        studentName: sName,
+        fatherName: fName,
+        email: email,
+        mobile: mobile,
+        city: city
+    };
+    
+    sendDataToSheet(registrationDataToSend)
+        .then(response => {
+            console.log('Sheet Registration Response:', response);
+            showQuizNotification('Registration Successful', `Your code: ${generatedCode}. Data submitted to sheet.`, 'info');
+        })
+        .catch(error => {
+            console.error('Sheet Registration Error:', error);
+            showQuizNotification('Registration Warning', `Registration saved locally, but sheet submission failed.`, 'warning');
+        });
+    // ----------------------------------------------------
+    
+    // Store data locally
+    localStorage.setItem('studentAccessCode', generatedCode);
+    localStorage.setItem('studentData', JSON.stringify(studentData));
+    
+    const registrations = JSON.parse(localStorage.getItem('wcwRegistrations') || '[]');
+    registrations.push({
+        ...studentData,
+        accessCode: generatedCode,
+        timestamp: new Date().toISOString()
+    });
+    localStorage.setItem('wcwRegistrations', JSON.stringify(registrations));
+    
+    
+    // Start the quiz after registration
+    startQuiz('WCW-RES-001', 'Student', generatedCode);
+}
+
+// Quiz Access Handler
+function checkDeveloperPassword() {
+    devErrorBox.style.display = 'none';
+    if (devPasswordInput.value === DEV_ACCESS_CODE) {
+        showQuizNotification('Access Granted', 'Welcome! You have successfully logged in as a developer.', 'info');
+        startQuiz('WCW-RES-001', 'Developer', DEV_ACCESS_CODE);
+    } else {
+        devErrorBox.style.display = 'block';
+    }
+}
+
+function accessQuiz(inputCode) {
+    const errorBox = document.getElementById('quiz-error-box');
+    errorBox.style.display = 'none';
+    
+    const storedStudentCode = localStorage.getItem('studentAccessCode');
+    
+    if (inputCode === QUIZ_ACCESS_CODE || inputCode === DEV_ACCESS_CODE || inputCode === storedStudentCode) {
+        showQuizNotification('Access Granted', 'Welcome! You can now start the quiz.', 'info');
+        startQuiz('WCW-RES-001', 'Student', inputCode);
+    } else {
+        errorBox.style.display = 'block';
+    }
+}
+
+function startQuiz(quizId, userType, code) {
+    currentQuizId = quizId;
+    quizData = quizData_WCW_RES_001;
+    
+    // Always start fresh - no progress restoration
+    currentQuestion = 0;
+    userAnswers = Array(quizData.length).fill(null);
+    
+    timeLeft = quizData.length * TIME_PER_MCQ;
+    questionTimeLeft = TIME_PER_MCQ;
+    
+    localStorage.setItem('lastAccessCode', code);
+
+    showPage('quiz-page');
+    initQuiz();
+}
+
+// Quiz Logic
+function initQuiz() {
+    quizSubjectEl.textContent = QUIZ_SUBJECT;
+    perMcqTimeEl.textContent = Math.floor(TIME_PER_MCQ / 60);
+    
+    websiteLinkEl.href = WEBSITE_LINK;
+    whatsappContactLinkEl.href = 'https://wa.me/' + WHATSAPP_CONTACT;
+    whatsappCommunityLinkEl.href = WHATSAPP_COMMUNITY;
+    
+    quizTitleEl.textContent = `Test - ID: ${currentQuizId}`;
+    renderQuestionNav();
+    renderQuestion();
+
+    if (totalTimeInterval) clearInterval(totalTimeInterval);
+    if (questionTimeInterval) clearInterval(questionTimeInterval);
+    
+    totalTimeInterval = setInterval(updateTotalTimer, 1000);
+    questionTimeInterval = setInterval(updateQuestionTimer, 1000);
+}
+
+function updateTotalTimer() {
+    if (timeLeft > 0) {
+        timeLeft--;
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        totalTimerEl.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    } else {
+        clearInterval(totalTimeInterval);
+        submitTest(true);
+    }
+}
+
+function updateQuestionTimer() {
+    if (questionTimeLeft > 0) {
+        questionTimeLeft--;
+        questionTimerEl.textContent = `${questionTimeLeft}`;
+    } else {
+        questionTimeLeft = TIME_PER_MCQ;
+        navigateQuestion('next');
+    }
+}
+
+function renderQuestionNav() {
+    questionNavEl.innerHTML = '';
+    quizData.forEach((_, index) => {
+        const navItem = document.createElement('div');
+        navItem.classList.add('question-nav-item');
+        navItem.textContent = index + 1;
+        navItem.onclick = () => navigateQuestion(index);
+        
+        if (index === currentQuestion) {
+            navItem.classList.add('current');
+        } else if (userAnswers[index] !== null) {
+            navItem.classList.add('solved');
+        } else if (userAnswers.slice(0, index).some(ans => ans !== null) || index < currentQuestion) {
+             navItem.classList.add('visited');
+        }
+        
+        questionNavEl.appendChild(navItem);
+    });
+    updateProgressBar();
+}
+
+function updateProgressBar() {
+    const solvedCount = userAnswers.filter(answer => answer !== null).length;
+    const progress = (solvedCount / quizData.length) * 100;
+    quizProgressEl.style.width = `${progress}%`;
+}
+
+function renderQuestion() {
+    reasoningEl.style.display = 'none';
+    reasoningBtn.classList.add('disabled');
+    const question = quizData[currentQuestion];
+    questionTextEl.textContent = `${currentQuestion + 1}. ${question.question}`;
+    
+    optionsContainerEl.innerHTML = '';
+    question.options.forEach((option, index) => {
+        const optionEl = document.createElement('div');
+        optionEl.classList.add('option');
+        optionEl.textContent = option;
+        
+        const isAnswered = userAnswers[currentQuestion] !== null;
+
+        if (!isAnswered) {
+            optionEl.onclick = () => selectOption(index);
+        } else {
+            if (index === question.correctAnswer) {
+                optionEl.classList.add('correct');
+            } else if (index === userAnswers[currentQuestion]) {
+                optionEl.classList.add('incorrect');
+            }
+        }
+        
+        if (userAnswers[currentQuestion] === index) {
+            optionEl.classList.add('selected');
+        }
+
+        optionsContainerEl.appendChild(optionEl);
+    });
+    
+    questionTimeLeft = TIME_PER_MCQ;
+    questionTimerEl.textContent = `${questionTimeLeft}`;
+    renderQuestionNav();
+    
+    if (userAnswers[currentQuestion] !== null) {
+        reasoningBtn.classList.remove('disabled');
+    }
+}
+
+function selectOption(optionIndex) {
+    const question = quizData[currentQuestion];
+    userAnswers[currentQuestion] = optionIndex;
+    
+    reasoningBtn.classList.remove('disabled');
+    
+    const options = optionsContainerEl.querySelectorAll('.option');
+    options.forEach((option, index) => {
+        option.onclick = null;
+        option.classList.remove('selected', 'correct', 'incorrect');
+        
+        if (index === question.correctAnswer) {
+            option.classList.add('correct');
+        } else if (index === optionIndex) {
+            option.classList.add('incorrect');
+        }
+        
+        if (index === optionIndex) {
+             option.classList.add('selected');
+        }
+    });
+
+    renderQuestionNav();
+    
+    setTimeout(() => {
+        navigateQuestion('next');
+    }, 800);
+}
+
+function navigateQuestion(direction) {
+    const totalQuestions = quizData.length;
+    let nextIndex;
+
+    if (typeof direction === 'number') {
+        nextIndex = direction;
+    } else if (direction === 'next') {
+        nextIndex = (currentQuestion + 1) % totalQuestions;
+    } else if (direction === 'prev') {
+        nextIndex = (currentQuestion - 1 + totalQuestions) % totalQuestions;
+    } else {
+        return;
+    }
+
+    if (nextIndex === currentQuestion) return;
+    
+    currentQuestion = nextIndex;
+    renderQuestion();
+}
+
+function toggleReasoning() {
+    if (reasoningBtn.classList.contains('disabled')) return;
+    
+    const question = quizData[currentQuestion];
+    if (reasoningEl.style.display === 'block') {
+        reasoningEl.style.display = 'none';
+    } else {
+        reasoningTextEl.textContent = question.reasoning;
+        reasoningEl.style.display = 'block';
+    }
+}
+
+function submitTest(isTimeout = false) {
+    if (!isTimeout && !confirm('Are you sure you want to submit the quiz?')) {
+        return;
+    }
+    
+    clearInterval(totalTimeInterval);
+    clearInterval(questionTimeInterval);
+
+    let correct = 0;
+    let incorrect = 0;
+    let unanswered = 0;
+
+    quizData.forEach((question, index) => {
+        if (userAnswers[index] === null) {
+            unanswered++;
+        } else if (userAnswers[index] === question.correctAnswer) {
+            correct++;
+        } else {
+            incorrect++;
+        }
+    });
+
+    const totalQuestions = quizData.length;
+    const totalScore = (correct * MARK_PER_MCQ) - (incorrect * NEGATIVE_MARKING);
+    const totalMarks = totalQuestions * MARK_PER_MCQ;
+
+    correctCountEl.textContent = correct;
+    incorrectCountEl.textContent = incorrect;
+    unansweredCountEl.textContent = unanswered;
+    
+    const performancePercentage = (correct / totalQuestions) * 100;
+    performanceFillEl.style.width = `${performancePercentage}%`;
+
+    const savedStudentData = JSON.parse(localStorage.getItem('studentData') || '{}');
+    const lastAccessCode = localStorage.getItem('lastAccessCode') || 'N/A';
+    
+    let studentInfoHtml = '';
+    for (const [key, value] of Object.entries(savedStudentData)) {
+        studentInfoHtml += `<tr><td>${key}</td><td>${value}</td></tr>`;
+    }
+    studentInfoHtml += `<tr><td>Access Code Used</td><td>${lastAccessCode}</td></tr>`;
+    studentInfoTable.innerHTML = studentInfoHtml;
+
+    quizResultsTable.innerHTML = `
+        <tr><td>Quiz ID</td><td>${currentQuizId}</td></tr>
+        <tr><td>Total Questions</td><td>${totalQuestions}</td></tr>
+        <tr><td>Correct Answers</td><td>${correct}</td></tr>
+        <tr><td>Incorrect Answers</td><td>${incorrect}</td></tr>
+        <tr><td>Unanswered</td><td>${unanswered}</td></tr>
+        <tr><td>Your Score</td><td>${totalScore} / ${totalMarks}</td></tr>
+    `;
+
+    // --- NEW: SEND QUIZ RESULTS TO GOOGLE SHEET ---
+    if (lastAccessCode && lastAccessCode !== 'N/A') {
+        const resultsDataToSend = {
+            type: 'quiz_result',
+            accessCode: lastAccessCode,
+            quizId: currentQuizId,
+            totalQuestions: totalQuestions,
+            correct: correct,
+            incorrect: incorrect,
+            unanswered: unanswered,
+            totalScore: totalScore,
+            totalMarks: totalMarks,
+            studentName: savedStudentData['Student Name'] || 'Unknown' 
+        };
+
+        sendDataToSheet(resultsDataToSend)
+            .then(response => {
+                console.log('Sheet Results Update Response:', response);
+            })
+            .catch(error => {
+                console.error('Sheet Results Update Error:', error);
+                showQuizNotification('Submission Error', 'Failed to send results to the server sheet.', 'error');
+            });
+    }
+    // ----------------------------------------------------
+
+
+    const results = JSON.parse(localStorage.getItem('wcwQuizResults') || '[]');
+    results.push({
+        studentName: savedStudentData['Student Name'] || 'Unknown',
+        accessCode: lastAccessCode,
+        quizId: currentQuizId,
+        totalQuestions: totalQuestions,
+        correct: correct,
+        incorrect: incorrect,
+        unanswered: unanswered,
+        totalScore: totalScore,
+        totalMarks: totalMarks,
+        timestamp: new Date().toISOString()
+    });
+    localStorage.setItem('wcwQuizResults', JSON.stringify(results));
+    
+    showQuizNotification('Quiz Completed!', `Your score: ${totalScore}/${totalMarks}. Check the results page for details.`, 'info');
+    
+    showPage('results-page');
+}
+
+function restartTest() {
+    if (confirm('Are you sure you want to retake the full test? Your current progress will be lost.')) {
+        quizData = quizData_WCW_RES_001;
+        currentQuestion = 0;
+        userAnswers = Array(quizData.length).fill(null);
+        timeLeft = quizData.length * TIME_PER_MCQ;
+        
+        showPage('quiz-page');
+        initQuiz();
+    }
+}
+
+function retakeIncorrect() {
+    const incorrectIndices = quizData.map((question, index) => {
+        const isIncorrect = userAnswers[index] !== null && 
+                            userAnswers[index] !== question.correctAnswer;
+        return isIncorrect ? index : -1;
+    }).filter(index => index !== -1);
+    
+    if (incorrectIndices.length === 0) {
+        showQuizNotification('No Incorrect Questions', 'You have no incorrect questions to retake!', 'info');
+        return;
+    }
+    
+    quizData = incorrectIndices.map(index => quizData_WCW_RES_001[index]);
+    currentQuestion = 0;
+    userAnswers = Array(quizData.length).fill(null);
+    timeLeft = quizData.length * TIME_PER_MCQ;
+    
+    showPage('quiz-page');
+    initQuiz();
+}
+
+function viewAllMcqs() {
+    allMcqsList.innerHTML = '';
+    quizData_WCW_RES_001.forEach((question, index) => {
+        const mcqItem = document.createElement('div');
+        mcqItem.classList.add('all-mcq-item');
+        mcqItem.innerHTML = `
+            <div class="question-text">${index + 1}. ${question.question}</div>
+            <div class="all-mcq-options">
+                ${question.options.map((option, optIndex) => `
+                    <div class="all-mcq-option ${optIndex === question.correctAnswer ? 'correct' : ''}">
+                        ${option}
+                    </div>
+                `).join('')}
+            </div>
+            <div class="all-mcq-reasoning">
+                <strong>Reasoning:</strong> ${question.reasoning}
+            </div>
+        `;
+        allMcqsList.appendChild(mcqItem);
+    });
+    showPage('all-mcqs-page');
+}</script>
